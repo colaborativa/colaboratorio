@@ -1,0 +1,73 @@
+// UTILITY CLASSES
+// ---------------
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+/* variaciones en la tipografía para customizar según colaborativa */
+@smalltitleFontFamily:  "colaborativaMedium", Helvetica, Arial, sans-serif;
+@titleFontFamily:       "colaborativaBook", Helvetica, Arial, sans-serif;
+
+h1 {
+  font-family: @titleFontFamily;
+  font-weight: normal;
+}
+h2 {
+  font-weight: normal;
+  font-family: @titleFontFamily;
+}
+h3 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-family: @smalltitleFontFamily;
+  line-height: @baseLineHeight * 1;
+}
+.navbar{
+	font-size: 15px;
+	font-family: @smalltitleFontFamily;
+	i{
+		margin-top:4px;
+		margin-right:4px;
+	}
+}
+.nav-pills{
+	font-size: 15px;
+	font-family: @titleFontFamily;
+}
+/* Tweak navbar brand link to be super sleek */
+.navbar-fixed-top .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: normal;
+  color: rgb(255,255,255);
+  text-shadow: 0 1px 0 rgba(0,0,0,1.0);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+.navbar-fixed-top .brand:hover {
+  text-decoration: none;
+}
+.brand em{
+	font-style: normal;
+	font-family: "colaborativaMediumItalic", Helvetica, Arial, sans-serif;
+}
