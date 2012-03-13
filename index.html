@@ -25,6 +25,7 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	{% include _googleanalytics.html %}
 </head>
 <body>
 	{% include _facebooklike.html %}
@@ -67,24 +68,7 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 		<div class="marketing">
 			<h1>Inauguramos próximamente</h1>
 			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter</p>
-			<ul class="quick-links">
-				<li>
-					<div id="mc_embed_signup">
-						<form action="http://colaborativa.us4.list-manage.com/subscribe/post?u=49ccc7dc39a917c95d3d3345a&amp;id=d5304b2d08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank">
-							<input type="email" value="" name="EMAIL" class="email input-xlarge" id="mce-EMAIL" placeholder="email address" required>
-							<input type="submit" value="Subscríbete" name="subscribe" id="mc-embedded-subscribe" class=" btn-success">
-						</form>
-					</div>
-				</li>
-				<li class="follow-btn">
-					<a href="https://twitter.com/colaborativaeu" class="twitter-follow-button" data-show-count="true" data-lang="en">Seguir @colaborativaeu</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</li>
-				<li class="tweet-btn">
-					<a href="https://twitter.com/intent/tweet?screen_name=colaborativaeu" class="twitter-mention-button" data-lang="es" data-related="javiburon,msanchezmora">Tweet to @colaborativaeu</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</li>
-			</ul>g
+			{% include _quicklinks.html %}
 		</div>
 		<section id="que">
 			<div class="page-header">
