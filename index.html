@@ -1,3 +1,8 @@
+---
+layout: default
+title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,99 +20,99 @@
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!-- Le fav and touch icons -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	</head>
-	<body>
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="">Colaboratorio</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li class="active"><a href="">Inicio</a></li>
-						</ul>
-					</div>
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+<body>
+	{% include _facebooklike.html %}
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="">Colaboratorio</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="">Inicio</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<header class="jumbotron subhead" id="overview">
+	</div>
+	<div class="container">
+		<div class="subnav">
+			<ul class="nav nav-pills">
+				<li><a href="#que">¿Qué es?</a></li>
+				<li><a href="#donde">¿Dónde está?</a></li>
+				<li><a href="#cuando">¿Cuándo empezamos?</a></li>
+			</ul>
+		</div>
+		<header class="subhead" id="overview">
+			<section>
 				<ul class="thumbnails">
 					<li class="span12">
-					    <a href="#" class="thumbnail">
-					      <img class="flexible" src="imagenes/colaboratorio.jpg" alt="">
-					    </a>
-					  </li>
+						<a href="#" class="thumbnail">
+							<img class="flexible" src="imagenes/colaboratorio.jpg" alt="">
+						</a>
+					</li>
 				</ul>
-				<div class="subnav">
-					<ul class="nav nav-pills">
-						<li><a href="#que">¿Qué es?</a></li>
-						<li><a href="#donde">¿Dónde está?</a></li>
-						<li><a href="#cuando">¿Cuándo empezamos?</a></li>
-						<li><a href="#informado">¡Me interesa!</a></li>
-					</ul>
-				</div>
-			</header>
-			<section id="que">
-				<div class="page-header">
-					<h1>¿Qué es? <small>Colaboratorio es un espacio digital y físico de cultura abierta</small></h1>
-				</div>
 			</section>
-			<section id="donde">
-				<div class="page-header">
-					<h1>¿Dónde está? <small>El espacio físico cerca de Colón, el espacio digital estás en él</small></h1>
-				</div>
-			</section>
-			<section id="cuando">
-				<div class="page-header">
-					<h1>¿Cuándo empezamos? <small>Esta primavera después de Pascua</small></h1>
-				</div>
-			</section>
-			<section id="informado">
-				<div class="page-header">
-					<h1>¡Me interesa! <small> Subscríbete a nuestra lista de correo o síguenos por Facebook o Twitter</small></h1>
-				</div>
-				<div class="row">
-					<div class="span4">
-						<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup">
-							<form action="http://colaborativa.us4.list-manage.com/subscribe/post?u=49ccc7dc39a917c95d3d3345a&amp;id=d5304b2d08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-								<label class="control-label" for="mce-EMAIL">Subscríbete a nuestra lista de correo</label>
-								<input type="email" value="" name="EMAIL" class="email input-xlarge" id="mce-EMAIL" placeholder="email address" required>
-								<div class="clear">
-									<input type="submit" value="Subscríbete" name="subscribe" id="mc-embedded-subscribe" class=" btn-success">
-								</div>
-							</form>
-						</div>
-						<!--End mc_embed_signup-->
+		</header>
+		<div class="marketing">
+			<h1>Inauguramos próximamente</h1>
+			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter</p>
+			<ul class="quick-links">
+				<li>
+					<div id="mc_embed_signup">
+						<form action="http://colaborativa.us4.list-manage.com/subscribe/post?u=49ccc7dc39a917c95d3d3345a&amp;id=d5304b2d08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank">
+							<input type="email" value="" name="EMAIL" class="email input-xlarge" id="mce-EMAIL" placeholder="email address" required>
+							<input type="submit" value="Subscríbete" name="subscribe" id="mc-embedded-subscribe" class=" btn-success">
+						</form>
 					</div>
-					<div class="span4">
-					</div>
-					<div class="span4">
-					</div>
-				</div>
-			</section>
-			<footer class="footer">
-				<p class="pull-right"><a href="#">Volver arriba</a></p>
-				<p>Un proyecto de <a href="http://twitter.com/javiburon" target="_blank">@javiburon</a> y <a href="http://twitter.com/msanchezmora" target="_blank">@msanchezmora</a> para <a href="http://twitter.com/colaborativaeu" target="_blank">@colaborativaeu</a>.</p>
-				<p>El código de esta página está licenciado bajo una <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">MIT license</a>. Los textos e imágenes bajo una licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-				<p>Utilizamos las siguientes herramientas y recursos de código abierto: <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://pages.github.com/">github pages</a>, <a href="https://github.com/mojombo/jekyll/wiki">jekyll</a> y <a href="http://lesscss.org/">LESS</a>. Iconos de <a href="http://glyphicons.com">Glyphicons</a>, bajo licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-			</footer>
+				</li>
+				<li class="follow-btn">
+					<a href="https://twitter.com/colaborativaeu" class="twitter-follow-button" data-show-count="true" data-lang="en">Seguir @colaborativaeu</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</li>
+				<li class="tweet-btn">
+					<a href="https://twitter.com/intent/tweet?screen_name=colaborativaeu" class="twitter-mention-button" data-lang="es" data-related="javiburon,msanchezmora">Tweet to @colaborativaeu</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</li>
+			</ul>g
 		</div>
-		<!-- Le javascript
-			================================================== -->
-			<!-- Placed at the end of the document so the pages load faster -->
-			<script src="js/jquery.js"></script>
-			<script src="js/application.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-		</body>
-</html>
+		<section id="que">
+			<div class="page-header">
+				<h1>¿Qué es? <small>Colaboratorio es un espacio digital y físico de cultura abierta</small></h1>
+			</div>
+		</section>
+		<section id="donde">
+			<div class="page-header">
+				<h1>¿Dónde está? <small>El espacio físico cerca de Colón, el espacio digital estás en él</small></h1>
+			</div>
+		</section>
+		<section id="cuando">
+			<div class="page-header">
+				<h1>¿Cuándo empezamos? <small>Esta primavera después de Pascua</small></h1>
+			</div>
+		</section>
+		<footer class="footer">
+			<p class="pull-right"><a href="#">Volver arriba</a></p>
+			<p>Un proyecto de <a href="http://twitter.com/javiburon" target="_blank">@javiburon</a> y <a href="http://twitter.com/msanchezmora" target="_blank">@msanchezmora</a> para <a href="http://twitter.com/colaborativaeu" target="_blank">@colaborativaeu</a>.</p>
+			<p>El código de esta página está licenciado bajo una <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">MIT license</a>. Los textos e imágenes bajo una licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+			<p>Utilizamos las siguientes herramientas y recursos de código abierto: <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://pages.github.com/">github pages</a>, <a href="https://github.com/mojombo/jekyll/wiki">jekyll</a> y <a href="http://lesscss.org/">LESS</a>. Iconos de <a href="http://glyphicons.com">Glyphicons</a>, bajo licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+		</footer>
+	</div>
+	<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="js/jquery.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+	</html>
