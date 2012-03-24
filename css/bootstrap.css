@@ -4035,3 +4035,24 @@ h3 {
   font-style: normal;
   font-family: "colaborativaMediumItalic", Helvetica, Arial, sans-serif;
 }
+@font-face {
+  font-family: 'colaborativaBook';
+  src: url("fonts/colaborativabook-webfont.eot");
+  src: url("fonts/colaborativabook-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativabook-webfont.woff") format("woff"), url("fonts/colaborativabook-webfont.ttf") format("truetype"), url("fonts/colaborativabook-webfont.svgz#colaborativaBook") format("svg"), url("fonts/colaborativabook-webfont.svg#colaborativaBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'colaborativaMedium';
+  src: url("fonts/colaborativamedium-webfont.eot");
+  src: url("fonts/colaborativamedium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativamedium-webfont.woff") format("woff"), url("fonts/colaborativamedium-webfont.ttf") format("truetype"), url("fonts/colaborativamedium-webfont.svgz#colaborativaMedium") format("svg"), url("fonts/colaborativamedium-webfont.svg#colaborativaMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'colaborativaMediumItalic';
+  src: url("fonts/colaborativamediumitalic-webfont.eot");
+  src: url("fonts/colaborativamediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativamediumitalic-webfont.woff") format("woff"), url("fonts/colaborativamediumitalic-webfont.ttf") format("truetype"), url("fonts/colaborativamediumitalic-webfont.svgz#colaborativaMediumItalic") format("svg"), url("fonts/colaborativamediumitalic-webfont.svg#colaborativaMediumItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
