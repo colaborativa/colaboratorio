@@ -17,9 +17,9 @@ body {
   background-position: 0 40px;
 }
 
-
-
-
+body {
+	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
 
 /* Space out sub-sections more
 -------------------------------------------------- */
@@ -43,10 +43,17 @@ hr.soften {
 -------------------------------------------------- */
 .jumbotron {
   position: relative;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .jumbotron h1 {
   margin-bottom: 9px;
-  font-size: 81px;
+  font-size: 71px;
   letter-spacing: -1px;
   line-height: 1;
 }
@@ -66,21 +73,32 @@ hr.soften {
 
 /* Masthead (docs home) */
 .masthead {
-  padding-top: 36px;
-  margin-bottom: 72px;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: white;
+  background-color: rgb(108, 164, 241);
+  
+}
+.masthead .inner{
+	background-image: url(../imagenes/colaboratoriogrid.jpg);
+	border: 1px solid white;
+	padding: 15px;
+	padding-bottom: 35px;
+	padding-top: 45px;
 }
 .masthead h1,
 .masthead p {
   text-align: center;
 }
 .masthead h1 {
-  margin-bottom: 18px;
+  margin-bottom: 5px;
 }
 .masthead p {
+	margin-bottom: 30px;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 
@@ -192,13 +210,21 @@ hr.soften {
 
 /* Quick links
 -------------------------------------------------- */
+#mc_embed_signup{
+	margin-top: 30px;
+	text-align: center;
+}
+
 .quick-links {
   min-height: 30px;
-  padding: 5px 20px;
-  margin: 36px 0;
+  margin: 0px;
   list-style: none;
   text-align: center;
   overflow: hidden;
+}
+
+.quick-links ul {
+  margin: 0px;
 }
 .quick-links li {
   display: inline;
@@ -585,10 +611,6 @@ form.well {
     font-size: 18px;
     padding: 10px 14px;
     margin: 0 auto 10px;
-  }
-  /* Masthead (home page jumbotron) */
-  .masthead {
-    padding-top: 0;
   }
 
   /* Don't space out quick links so much */

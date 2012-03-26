@@ -1,113 +1,89 @@
+---
+layout: default
+title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<title>Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% include _socialmeta.html %}
 	<!-- Le styles -->
-	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/docs.css" rel="stylesheet">
-	<style>
-	body {
-		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	}
-	</style>
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!-- Le fav and touch icons -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	</head>
-	<body>
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="">Colaboratorio</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li class="active"><a href="">Inicio</a></li>
-						</ul>
-					</div>
+	<!-- Le fav and touch icons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	{% include _googleanalytics.html %}
+</head>
+<body data-spy="scroll">
+	{% include _facebooklike.html %}
+	{% include _navbar.html %}
+	<div class="container">
+		<header class="jumbotron masthead">
+			<div class="inner">
+				<h1>Colaboratorio</h1>
+				<p>Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</p>
+				{% include _quicklinks.html %}
+			</div>
+		</header>
+		{% comment %}
+		<div class="subnav" >
+			<ul class="nav nav-pills">
+				<li><a href="#que">¿Qué es?</a></li>
+				<li><a href="#como">¿Cómo funciona?</a></li>
+			</ul>
+		</div>
+		<hr/>
+		{% endcomment %}
+		<hr class="soften">
+		<div class="marketing">
+			<h1>Empezamos en Abril…</h1>
+			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado</p>
+			<div class="row">
+				<div class="span4">
+					<h2>Cultura abierta</h2>
+					<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software abierto</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
+				</div>
+				<div class="span4">
+					<h2>Arte y Ciencia</h2>
+					<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
+				</div>
+				<div class="span4">
+					<h2>Colaboratorio</h2>
+					<p>Colaboratorio es nuestra modesta respuesta a estas dos situaciones. Un espacio digital y físico dedicado a explorar la riqueza y posibilidades de la <strong>cultura abierta</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h2>Centro de recursos</h2>
+					<p>Colaboratorio funciona como un centro de recursos abierto para desarrollar talleres, proyectos y eventos relacionados con cualquier aspecto de la <strong>cultura abierta</strong>.</p>
+				</div>
+				<div class="span4">
+					<h2>Licencias abiertas</h2>
+					<p>Ofrecemos nuestro espacio de trabajo, apoyo técnico y herramientas <strong>de forma gratuita</strong>, tan sólo te pediremos que liberes total o parcialmente el proyecto con una <strong>licencia abierta</strong> de tu elección.</p>
+				</div>
+				<div class="span4">
+					<h2>Líneas de trabajo</h2>
+					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura abierta</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<header class="jumbotron subhead" id="overview">
-				<ul class="thumbnails">
-					<li class="span12">
-					    <a href="#" class="thumbnail">
-					      <img class="flexible" src="imagenes/colaboratorio.jpg" alt="">
-					    </a>
-					  </li>
-				</ul>
-				<div class="subnav">
-					<ul class="nav nav-pills">
-						<li><a href="#que">¿Qué es?</a></li>
-						<li><a href="#donde">¿Dónde está?</a></li>
-						<li><a href="#cuando">¿Cuándo empezamos?</a></li>
-						<li><a href="#informado">¡Me interesa!</a></li>
-					</ul>
-				</div>
-			</header>
-			<section id="que">
-				<div class="page-header">
-					<h1>¿Qué es? <small>Colaboratorio es un espacio digital y físico de cultura abierta</small></h1>
-				</div>
-			</section>
-			<section id="donde">
-				<div class="page-header">
-					<h1>¿Dónde está? <small>El espacio físico cerca de Colón, el espacio digital estás en él</small></h1>
-				</div>
-			</section>
-			<section id="cuando">
-				<div class="page-header">
-					<h1>¿Cuándo empezamos? <small>Esta primavera después de Pascua</small></h1>
-				</div>
-			</section>
-			<section id="informado">
-				<div class="page-header">
-					<h1>¡Me interesa! <small> Subscríbete a nuestra lista de correo o síguenos por Facebook o Twitter</small></h1>
-				</div>
-				<div class="row">
-					<div class="span4">
-						<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup">
-							<form action="http://colaborativa.us4.list-manage.com/subscribe/post?u=49ccc7dc39a917c95d3d3345a&amp;id=d5304b2d08" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-								<label class="control-label" for="mce-EMAIL">Subscríbete a nuestra lista de correo</label>
-								<input type="email" value="" name="EMAIL" class="email input-xlarge" id="mce-EMAIL" placeholder="email address" required>
-								<div class="clear">
-									<input type="submit" value="Subscríbete" name="subscribe" id="mc-embedded-subscribe" class=" btn-success">
-								</div>
-							</form>
-						</div>
-						<!--End mc_embed_signup-->
-					</div>
-					<div class="span4">
-					</div>
-					<div class="span4">
-					</div>
-				</div>
-			</section>
-			<footer class="footer">
-				<p class="pull-right"><a href="#">Volver arriba</a></p>
-				<p>Un proyecto de <a href="http://twitter.com/javiburon" target="_blank">@javiburon</a> y <a href="http://twitter.com/msanchezmora" target="_blank">@msanchezmora</a> para <a href="http://twitter.com/colaborativaeu" target="_blank">@colaborativaeu</a>.</p>
-				<p>El código de esta página está licenciado bajo una <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">MIT license</a>. Los textos e imágenes bajo una licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-				<p>Utilizamos las siguientes herramientas y recursos de código abierto: <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://pages.github.com/">github pages</a>, <a href="https://github.com/mojombo/jekyll/wiki">jekyll</a> y <a href="http://lesscss.org/">LESS</a>. Iconos de <a href="http://glyphicons.com">Glyphicons</a>, bajo licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-			</footer>
-		</div>
-		<!-- Le javascript
-			================================================== -->
-			<!-- Placed at the end of the document so the pages load faster -->
-			<script src="js/jquery.js"></script>
-			<script src="js/application.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-		</body>
-</html>
+		{% include _footer.html %}
+	</div>
+	<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="js/jquery.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-scrollspy.js"></script>
+	</body>
+	</html>
