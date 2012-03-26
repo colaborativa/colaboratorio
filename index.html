@@ -4,19 +4,15 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<title>Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% include _socialmeta.html %}
 	<!-- Le styles -->
-	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/docs.css" rel="stylesheet">
-	<style>
-	body {
-		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-	}
-	</style>
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -27,77 +23,60 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	{% include _googleanalytics.html %}
 </head>
-<body>
+<body data-spy="scroll">
 	{% include _facebooklike.html %}
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-				<a class="brand" href="">Colaboratorio</a>
-				<div class="nav-collapse">
-					<ul class="nav">
-						<li class="active"><a href="">Inicio</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% include _navbar.html %}
 	<div class="container">
+		<header class="jumbotron masthead">
+			<div class="inner">
+				<h1>Colaboratorio</h1>
+				<p>Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</p>
+				{% include _quicklinks.html %}
+			</div>
+		</header>
 		{% comment %}
-		<div class="subnav">
+		<div class="subnav" >
 			<ul class="nav nav-pills">
 				<li><a href="#que">¿Qué es?</a></li>
+				<li><a href="#como">¿Cómo funciona?</a></li>
 			</ul>
 		</div>
+		<hr/>
 		{% endcomment %}
-		<header class="subhead" id="overview">
-			<section>
-				<ul class="thumbnails">
-					<li class="span12">
-						<a href="" class="thumbnail">
-							<img class="flexible" src="imagenes/colaboratorio.jpg" alt="">
-						</a>
-					</li>
-				</ul>
-			</section>
-		</header>
+		<hr class="soften">
 		<div class="marketing">
-			<h1>Próximamente…</h1>
+			<h1>Empezamos en Abril…</h1>
 			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado</p>
-			{% include _quicklinks.html %}
-		</div>
-		{% comment %}
-		<section id="que">
-			<div class="page-header">
-				<h1>¿Qué es? <small>Colaboratorio es un espacio dedicado a la cultura abierta</small></h1>
+			<div class="row">
+				<div class="span4">
+					<h2>Cultura abierta</h2>
+					<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software abierto</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
+				</div>
+				<div class="span4">
+					<h2>Arte y Ciencia</h2>
+					<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
+				</div>
+				<div class="span4">
+					<h2>Colaboratorio</h2>
+					<p>Colaboratorio es nuestra modesta respuesta a estas dos situaciones. Un espacio digital y físico dedicado a explorar la riqueza y posibilidades de la <strong>cultura abierta</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+				</div>
 			</div>
 			<div class="row">
-				<div class="span3">
-						<h3>Software e innovación</h3>
-						<p>Desde que comenzamos nuestra andadura en hemos estado fuertemente influenciados por el software. No sólo en las decisiones más pragmáticas ademá</p>
-						<hr>
-						<h3>Software e innovación</h3>
-						<p>Desde que comenzamos nuestra andadura en hemos estado fuertemente influenciados por el software. No sólo en las decisiones más pragmáticas ademá</p>
+				<div class="span4">
+					<h2>Centro de recursos</h2>
+					<p>Colaboratorio funciona como un centro de recursos abierto para desarrollar talleres, proyectos y eventos relacionados con cualquier aspecto de la <strong>cultura abierta</strong>.</p>
 				</div>
-				<div class="span9">
-					<h2>Cultura abierta</h2>
-					<p>Desde que comenzamos nuestra andadura en hemos estado fuertemente influenciados por el software. No sólo en las decisiones más pragmáticas además de los Por una lado la paradoja de iniciar una aventura empresarial y por otro lado el total. Creemos que es en el software donde se han producido los movimientos sociales, políticos y culturales más interesantes de los últimas dos décadas.</p>
-					<h2>Ciencia, arte y tecnología</h2>
-					<p>Desde que comenzamos nuestra andadura en "colaborativa":http://colaborativa.eu hemos estado fuertemente influenciados por el software. No sólo en las decisiones más pragmáticas además de los Por una lado la paradoja de iniciar una aventura empresarial y por otro lado el total. Creemos que es en el software donde se han producido los movimientos sociales, políticos y culturales más interesantes de los últimas dos décadas. El vertiginoso ritmo de innovación ocurrido en el software en estos años y las soluciones pragmáticas propuestas han dado pie a auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos.  Muchas el <a href="http://es.wikipedia.org/wiki/Copyleft">Copyleft</a>, el <a href="http://es.wikipedia.org/wiki/Software_libre">software libre</a> y el <a href="http://es.wikipedia.org/wiki/Hardware_libre">hardware libre</a></p>
+				<div class="span4">
+					<h2>Licencias abiertas</h2>
+					<p>Ofrecemos nuestro espacio de trabajo, apoyo técnico y herramientas <strong>de forma gratuita</strong>, tan sólo te pediremos que liberes total o parcialmente el proyecto con una <strong>licencia abierta</strong> de tu elección.</p>
+				</div>
+				<div class="span4">
+					<h2>Líneas de trabajo</h2>
+					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura abierta</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
 				</div>
 			</div>
-		</section>
-		{% endcomment %}
-		<footer class="footer">
-			<p class="pull-right"><a href="#">Volver arriba</a></p>
-			<p>Un proyecto de <a href="http://twitter.com/javiburon" target="_blank">@javiburon</a> y <a href="http://twitter.com/msanchezmora" target="_blank">@msanchezmora</a> para <a href="http://twitter.com/colaborativaeu" target="_blank">@colaborativaeu</a>.</p>
-			<p>El código de esta página está licenciado bajo una <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">MIT license</a>. Los textos e imágenes bajo una licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-			<p>Utilizamos las siguientes herramientas y recursos de código abierto: <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://pages.github.com/">github pages</a>, <a href="https://github.com/mojombo/jekyll/wiki">jekyll</a> y <a href="http://lesscss.org/">LESS</a>. Iconos de <a href="http://glyphicons.com">Glyphicons</a>, bajo licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-		</footer>
+		</div>
+		{% include _footer.html %}
 	</div>
 	<!-- Le javascript
 		================================================== -->
@@ -105,5 +84,6 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 		<script src="js/jquery.js"></script>
 		<script src="js/application.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-scrollspy.js"></script>
 	</body>
 	</html>
