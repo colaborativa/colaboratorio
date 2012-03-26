@@ -9,6 +9,7 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 	<meta charset="utf-8">
 	<title>Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% include _socialmeta.html %}
 	<!-- Le styles -->
 	<link href="css/docs.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -33,6 +34,7 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 				{% include _quicklinks.html %}
 			</div>
 		</header>
+		{% comment %}
 		<div class="subnav" >
 			<ul class="nav nav-pills">
 				<li><a href="#que">¿Qué es?</a></li>
@@ -40,87 +42,40 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 			</ul>
 		</div>
 		<hr/>
-		<section>
-			<div class="marketing">
-				<h1>Empezamos en Abril…</h1>
-				<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado</p>
-				<div class="row">
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">
-						<h2>Built for and by nerds</h2>
-						<p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
-					</div>
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">
-						<h2>For all skill levels</h2>
-						<p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
-					</div>
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">
-						<h2>Cross-everything</h2>
-						<p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">
-						<h2>Built for and by nerds</h2>
-						<p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
-					</div>
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">
-						<h2>For all skill levels</h2>
-						<p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
-					</div>
-					<div class="span4">
-						<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">
-						<h2>Cross-everything</h2>
-						<p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="que">
-			<div class="page-header">
-				<h1>¿Qué es? <small>Espacio de Cultura Abierta en torno al arte, la ciencia y la tecnología</small></h1>
-			</div>
+		{% endcomment %}
+		<hr class="soften">
+		<div class="marketing">
+			<h1>Empezamos en Abril…</h1>
+			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado</p>
 			<div class="row">
-				<div class="span3">
-					<blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
-						<small>Sir Ken Robinson. <cite title="">Out of our minds</cite></small>
-					</blockquote>
-				</div>
-				<div class="span9">
+				<div class="span4">
 					<h2>Cultura abierta</h2>
-					<p>El vertiginoso ritmo de innovación tecnológico e intelectual ocurrido en el movimiento del software abierto en los últimos años ha dado pie a auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos. La cultura abierta en todas sus variantes está influenciando irremediablemente todos los ámbitos de nuestra sociedad y lo mejor aún está por llegar.</p>
-					<h2>Arte y Ciencia</h2>
-					<p>En los últimos siglos nuestra sociedad se ha conformado mediante la división del arte y la ciencia, atribuyéndoles valores antagónicos e incluso características anatómicas diferenciadas <a href="http://girocognitivo.wordpress.com/2012/01/11/el-mito-cerebro-izquierdo-cerebro-derecho/">–el mito de los hemisferios del cerebro–</a>. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
-					<h2>Colaboratorio</h2>
-					<p>Colaboratorio es nuestra modesta respuesta a estas dos situaciones. Un espacio digital y físico dedicado a explorar la riqueza y posibilidades de la cultura abierta –el <a href="http://es.wikipedia.org/wiki/Copyleft">copyleft</a>, el <a href="http://es.wikipedia.org/wiki/Software_libre">software libre</a>, el <a href="http://es.wikipedia.org/wiki/Hardware_libre">hardware libre</a> y demás manifestaciones de la cultura abierta– con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+					<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software abierto</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
 				</div>
-			</div>
-		</section>
-		<section id="como">
-			<div class="page-header">
-				<h1>¿Cómo funciona? <small>Centro de recursos bajo licencias abiertas</small></h1>
+				<div class="span4">
+					<h2>Arte y Ciencia</h2>
+					<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
+				</div>
+				<div class="span4">
+					<h2>Colaboratorio</h2>
+					<p>Colaboratorio es nuestra modesta respuesta a estas dos situaciones. Un espacio digital y físico dedicado a explorar la riqueza y posibilidades de la <strong>cultura abierta</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+				</div>
 			</div>
 			<div class="row">
-				<div class="span3">
-					<blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
-						<small>Sir Ken Robinson. <cite title="">The Power of Open</cite></small>
-					</blockquote>
-				</div>
-				<div class="span9">
+				<div class="span4">
 					<h2>Centro de recursos</h2>
-					<p>Colaboratorio funciona como un centro de recursos abierto. Ofrecemos nuestro espacio de trabajo, apoyo técnico y herramientas <strong>de forma gratuita</strong> para desarrollar talleres, proyectos y eventos relacionados con cualquier aspecto de la cultura abierta. Tan sólo te pediremos que liberes total o parcialmente el proyecto con una licencia abierta de tu elección.</p>
-					<p>El espacio disponible no es demasiado amplio por lo que nuestra oferta se ajustará a la demanda de uso y a <strong>nuestra disponibilidad</strong>. Debido a estas limitaciones iniciales apostaremos por proyectos cortos con objetivos precisos frente a aquellos más largos, complejos o con objetivos más abiertos. La lista de herramientas disponibles estará en constante cambio ya que muchos de estás –tanto físicas como digitales– las construiremos nosotros mismos. Si deseas colaborar aportando recursos propios de forma temporal o permanente contacta con nosotros.</p>
-					<h2>Lineas de trabajo</h2>
-					<p>Los proyectos en Colaboratorio se organizan a través de lineas de trabajo o temáticas relacionadas con la cultura abierta. A través de estas lineas se irán proponiendo talleres, proyectos y eventos relacionados. Cualquier individuo, empresa o asociación puede proponer actividades relacionadas o nuevas lineas de trabajo a través de proyectos concretos.</p>
+					<p>Colaboratorio funciona como un centro de recursos abierto para desarrollar talleres, proyectos y eventos relacionados con cualquier aspecto de la <strong>cultura abierta</strong>.</p>
+				</div>
+				<div class="span4">
+					<h2>Licencias abiertas</h2>
+					<p>Ofrecemos nuestro espacio de trabajo, apoyo técnico y herramientas <strong>de forma gratuita</strong>, tan sólo te pediremos que liberes total o parcialmente el proyecto con una <strong>licencia abierta</strong> de tu elección.</p>
+				</div>
+				<div class="span4">
+					<h2>Líneas de trabajo</h2>
+					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura abierta</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
 				</div>
 			</div>
-		</section>
+		</div>
 		{% include _footer.html %}
 	</div>
 	<!-- Le javascript
