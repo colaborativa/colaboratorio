@@ -10,24 +10,7 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 	<title>Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte y la tecnología</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% include _socialmeta.html %}
-	<!-- Le styles -->
-	<link href="css/docs.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<!-- Le fav and touch icons -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	<script src="http://platform.twitter.com/anywhere.js?id=kqjBj1c4tde9mkKy9fu2CQ&v=1" type="text/javascript"></script>
-	<script type="text/javascript">
-	  twttr.anywhere(function (T) {
-		T.hovercards();
-		T.linkifyUsers();
-	  });
-	</script>
+	{% include _headscripts.html %}
 	{% include _googleanalytics.html %}
 </head>
 <body data-spy="scroll">
@@ -82,6 +65,41 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura abierta</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
 				</div>
 			</div>
+			<hr class="soften">
+			<h1>Proyectos, talleres y eventos</h1>
+			<p class="marketing-byline">Estas son las iniciativas que hemos puesto en marcha en Colaboratorio</p>
+			<div class="row">
+				<ul class="thumbnails">
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="http://placehold.it/260x180" alt="">
+							<div class="caption">
+								<h2>Proyecto RepRapPro Huxley</h2>
+								<h4>Sábado 25 y Sábado 30 de Abril de 2012</h4>
+								<p>Iniciamos Colaboratorio con el montaje esta pequeña impresora 3D basada en hardware libre y un diseño que permite la autoreplicación. Si quieres introducirte en el mundo de la fabricación digital o simplemente te interesa replicarte esta impresora estás invitado a participar.</p>
+								<p><a href="#">Más Información y como participar</a></p>
+								<p><span class="label">Fabricación digital</span> <span class="label">Hardware Libre</span> <span class="label">Proyecto</span></p>
+							</div>
+						 </div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="http://placehold.it/260x180" alt="">
+							<div class="caption">
+								<h2>Podcasts libre: Las botas de siete leguas</h2>
+								<h4>Fecha por confirmar</h4>
+								<p>Desde Colaboratorio <br></p>
+								<p><a href="#">Más Información</a></p>
+								<p><span class="label">Medios libres</span> <span class="label">Radio</span> <span class="label">Evento</span></p>
+							</div>
+						</div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 		{% include _footer.html %}
 	</div>
@@ -93,4 +111,4 @@ title: Colaboratorio | Espacio de cultura abierta en torno a la ciencia, el arte
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/bootstrap-scrollspy.js"></script>
 	</body>
-	</html>
+</html>

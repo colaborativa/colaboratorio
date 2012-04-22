@@ -4003,6 +4003,9 @@ h3 {
   font-family: "colaborativaMedium", Helvetica, Arial, sans-serif;
   line-height: 18px;
 }
+h4 {
+  margin-bottom: 5px;
+}
 .navbar {
   font-size: 15px;
   font-family: "colaborativaMedium", Helvetica, Arial, sans-serif;
