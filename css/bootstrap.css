@@ -3835,26 +3835,26 @@ a.thumbnail:hover {
   background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
-.accordion {
-  margin-bottom: 18px;
+@font-face {
+  font-family: 'colaborativaBook';
+  src: url("fonts/colaborativabook-webfont.eot");
+  src: url("fonts/colaborativabook-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativabook-webfont.woff") format("woff"), url("fonts/colaborativabook-webfont.ttf") format("truetype"), url("fonts/colaborativabook-webfont.svgz#colaborativaBook") format("svg"), url("fonts/colaborativabook-webfont.svg#colaborativaBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-.accordion-group {
-  margin-bottom: 2px;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+@font-face {
+  font-family: 'colaborativaMedium';
+  src: url("fonts/colaborativamedium-webfont.eot");
+  src: url("fonts/colaborativamedium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativamedium-webfont.woff") format("woff"), url("fonts/colaborativamedium-webfont.ttf") format("truetype"), url("fonts/colaborativamedium-webfont.svgz#colaborativaMedium") format("svg"), url("fonts/colaborativamedium-webfont.svg#colaborativaMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-.accordion-heading {
-  border-bottom: 0;
-}
-.accordion-heading .accordion-toggle {
-  display: block;
-  padding: 8px 15px;
-}
-.accordion-inner {
-  padding: 9px 15px;
-  border-top: 1px solid #e5e5e5;
+@font-face {
+  font-family: 'colaborativaMediumItalic';
+  src: url("fonts/colaborativamediumitalic-webfont.eot");
+  src: url("fonts/colaborativamediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/colaborativamediumitalic-webfont.woff") format("woff"), url("fonts/colaborativamediumitalic-webfont.ttf") format("truetype"), url("fonts/colaborativamediumitalic-webfont.svgz#colaborativaMediumItalic") format("svg"), url("fonts/colaborativamediumitalic-webfont.svg#colaborativaMediumItalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 .carousel {
   position: relative;
@@ -3996,12 +3996,27 @@ h1 {
 h2 {
   font-weight: normal;
   font-family: "colaborativaBook", Helvetica, Arial, sans-serif;
+  line-height: 22.5px;
+  margin-bottom: 10px;
 }
 h3 {
   margin-bottom: 5px;
   font-weight: normal;
   font-family: "colaborativaMedium", Helvetica, Arial, sans-serif;
   line-height: 18px;
+}
+h4 {
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .span4 > .thumbnail {
+    height: 550px;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  .span4 > .thumbnail {
+    height: 450px;
+  }
 }
 .navbar {
   font-size: 15px;
@@ -4014,6 +4029,10 @@ h3 {
 .nav-pills {
   font-size: 15px;
   font-family: "colaborativaBook", Helvetica, Arial, sans-serif;
+}
+/*  similar size for thumbnails with captions*/
+.thumbnail .caption {
+  min-height: 245px;
 }
 /* Tweak navbar brand link to be super sleek */
 .navbar-fixed-top .brand {

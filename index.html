@@ -10,24 +10,7 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 	<title>Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% include _socialmeta.html %}
-	<!-- Le styles -->
-	<link href="css/docs.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<!-- Le fav and touch icons -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	<script src="http://platform.twitter.com/anywhere.js?id=kqjBj1c4tde9mkKy9fu2CQ&v=1" type="text/javascript"></script>
-	<script type="text/javascript">
-	  twttr.anywhere(function (T) {
-		T.hovercards();
-		T.linkifyUsers();
-	  });
-	</script>
+	{% include _headscripts.html %}
 	{% include _googleanalytics.html %}
 </head>
 <body data-spy="scroll">
@@ -52,8 +35,8 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 		{% endcomment %}
 		<hr class="soften">
 		<div class="marketing">
-			<h1>Empezamos en Abril…</h1>
-			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado</p>
+			<h1>¿Qué es colaboratorio?</h1>
+			<p class="marketing-byline">Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
 			<div class="row">
 				<div class="span4">
 					<h2>Cultura libre</h2>
@@ -82,6 +65,44 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura libre</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
 				</div>
 			</div>
+			<hr class="soften">
+			<h1>Proyectos, talleres y eventos</h1>
+			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado de las actividades</p>
+			<div class="row">
+				<ul class="thumbnails">
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="imagenes/repraphuxley.jpg" alt="">
+							<div class="caption">
+								<h2>Proyecto RepRapPro Huxley</h2>
+								<h4>Fecha por confirmar</h4>
+								<p>Iniciamos Colaboratorio con el montaje esta pequeña impresora 3D basada en hardware libre y un diseño que permite la autoreplicación. Si quieres introducirte en el mundo de la fabricación digital o simplemente te interesa replicarte esta impresora estás invitado a participar.</p>
+								<p><a href="http://reprap.org">Más Información sobre el proyecto RepRap</a></p>
+								<p><span class="label">Fabricación digital</span> <span class="label">Hardware Libre</span> <span class="label">Proyecto</span> <span class="label label-info">GNU General Public Licence</span></p>
+							</div>
+						 </div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="imagenes/colaboratorio-placeholders.jpg" alt="">
+							<div class="caption">
+								<h2>Podcast: Botas de siete leguas</h2>
+								<h4>7 de Mayo de 2012</h4>
+								<p>La nueva temporada de este podcast sobre movilidad se grabará en Colaboratorio. "Botas de Siete Leguas" está realizado por personas pertenecientes al entorno del Grupo Permanente de Movilidad Sostenible, de El Consejo de la Juventud, la Plataforma Carril Bici y la Asociación Peatonal Cordobesa A Pata.</p>
+								<p><a href="http://www.ivoox.com/podcast-podcast-programa-botas-siete-leguas_sq_f111311_1.html">Web de "Botas de siete leguas"</a></p>
+								<p><span class="label">Medios libres</span> <span class="label">Podcast</span> <span class="label">Evento</span> {% comment %}<span class="label label-info">Creative Commons</span>{% endcomment %}</p>
+							</div>
+						</div>
+					</li>
+					<li class="span4">
+						<div class="thumbnail">
+							<img src="imagenes/colaboratorio-proximamente.jpg" alt="">
+							<div class="caption">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 		{% include _footer.html %}
 	</div>
@@ -93,4 +114,4 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/bootstrap-scrollspy.js"></script>
 	</body>
-	</html>
+</html>

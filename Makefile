@@ -11,5 +11,5 @@ WATCHR ?= `which watchr`
 #
 
 bootstrap:
-	lessc less/bootstrap.less > css/bootstrap.css
-	lessc less/responsive.less > css/bootstrap-responsive.css
+lessc less/bootstrap.less > css/bootstrap.css
+lessc less/responsive.less > css/bootstrap-responsive.css
