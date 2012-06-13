@@ -32,7 +32,7 @@ h1 {
 h2 {
   font-weight: normal;
   font-family: @titleFontFamily;
-  line-height: @baseLineHeight * 1.25;
+  line-height: @baseLineHeight * 1.15;
   margin-bottom: 10px;
 }
 h3 {
@@ -51,7 +51,12 @@ h4 {
 }
 @media (min-width: 980px) and (max-width: 1199px) {
   .span4>.thumbnail {
-    height: 450px;
+    height: 480px;
+  }
+}
+@media (min-width: 1200px) {
+  .span4>.thumbnail {
+    height: 500px;
   }
 }
 .navbar{
