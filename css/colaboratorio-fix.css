@@ -1,11 +1,17 @@
+/* fix id que para que se posicione guay */
+
+#que{
+	padding-top: 30px;
+}
+
 /* this is for fixing line heigh problems in narrow screens */
-h1, h2, h3 {
+h2, h3 {
 	line-height: 25px!important;
 }
 
 /* this is for allowing a single row for all the chapter and event elements changing the number of rows in different screen sizes */
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
 	.span4{
 		margin-left:0!important;
 	}

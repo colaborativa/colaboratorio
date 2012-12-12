@@ -6,114 +6,158 @@ subtitle: Espacio de cultura libre en torno a la ciencia, el arte y la tecnolog�
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="utf-8">
-	<title>{{ page.title }} | {{ page.subtitle }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	{% include _socialmeta.html %}
-	{% include _headscripts.html %}
-	{% include _googleanalytics.html %}
-</head>
-<body data-spy="scroll">
-	{% include _navbar.html %}
-	<div class="container">
-		<header class="jumbotron masthead">
-			<div class="inner">
-				<h1>{{ page.title }}</h1>
-				<p>Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
-				{% include _quicklinks.html %}
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }} | {{ page.subtitle }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% include _socialmeta.html %}
+		{% include _headscripts.html %}
+		{% include _googleanalytics.html %}
+	</head>
+	<body data-spy="scroll">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="navbar-inner">
+			    <div class="container">
+			      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="brand" href="./index.html">Colaboratorio</a>
+			      <div class="nav-collapse collapse">
+			        <ul class="nav">
+			          <li><a href="#que">¿Qué es?</a></li>
+			          <li><a href="#proyectos">Proyectos, talleres y eventos</a></li>
+			          <li><a href="#como">¿Cómo funciona?</a></li>
+			        </ul>
+			      </div>
+			    </div>
+			  </div>
 			</div>
-		</header>
-		<hr class="soften">
-		<div class="marketing">
-			<h1>¿Qué es Colaboratorio?</h1>
-			<p class="marketing-byline">Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
-			<div class="row-fluid">
-				<div class="span4">
-					<h2>Cultura libre</h2>
-					<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software libre</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
+			<header class="jumbotron masthead">
+				<div class="container">
+					<div class="inner">
+						<h1>{{ page.title }}</h1>
+						<p>Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
+						{% include _quicklinks.html %}
+					</div>
 				</div>
-				<div class="span4">
-					<h2>Arte y Ciencia</h2>
-					<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
-				</div>
-				<div class="span4">
-					<h2>Colaboratorio</h2>
-					<p>Colaboratorio es nuestra respuesta a estas dos situaciones. Un espacio digital y físico dedicado a <strong>explorar la riqueza y posibilidades de la cultura libre</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
-				</div>
-				<div class="span4">
-					<h2>Todo empezó en un garaje…</h2>
-					<p>¿Qué mejor lugar para empezar Colaboratorio que nuestro propio garaje? Estamos situados en la calle Marroquíes en el barrio de Santa Marina, justo al lado de los jardines de Colón. <a href="http://maps.google.es/maps?q=colaborativa+&hl=es&sll=37.890536,-4.775723&sspn=0.01265,0.027874&hq=colaborativa&t=m&z=16">Mapa</a></p>
-				</div>
-				<div class="span4">
-					<h2>Recursos a cambio de cultura libre</h2>
-					<p>Ofrecemos, dentro de nuestras posibilidades, un espacio de trabajo, apoyo técnico y herramientas <strong>sin coste alguno</strong>. A cambio te pediremos que liberes el proyecto con una <strong>licencia libre de tu elección</strong> y que mantengas una pequeña wiki sobre el proyecto en nuestra web.</p>
-				</div>
-				<div class="span4">
-					<h2>Líneas de trabajo</h2>
-					<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura libre</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
-				</div>
-			</div>
-			<hr class="soften">
-			<h1 id="proyectos">Proyectos, talleres y eventos</h1>
-			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado de las actividades</p>
-			<div class="row-fluid">
-				<ul class="thumbnails">
-					{% for event in site.categories['evento'] reversed %}
-					<li class="span4">
-						<div class="thumbnail">
-							<a href="#myModal" data-toggle="modal"><img src="imagenes/{{ event.slug }}.jpg" alt=""></a>
-							<div class="caption">
-								<h2>{{ event.title }}</h2>
-								<h4>{{ event.subtitle }}</h4>
-								<p>{{ event.content }}</p>
-								<p>
-									{% for tag in event.tags %}
-										{% if tag.license %}
-											<span class="label label-info">{{ tag.license }}</span>
-										{% else %}
-											<span class="label">{{ tag }}</span>
-										{% endif %}
-									{% endfor %}
-								</p>
-							</div>
-							<!-- Modal -->
-							<div id="myModal" class="modal hide fade custom-height-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-									<h2>{{ event.title }}</h2>
-									<h4>{{ event.subtitle }}</h4>
-								</div>
-								<div class="modal-body">
-									<div id="myCarousel" class="carousel slide">
-										<!-- Carousel items -->
-										<div class="carousel-inner">
-											<div class="active item">
-												<img src="http://farm8.staticflickr.com/7206/6973688705_9c7c173d88_c.jpg" alt="">
-												<div class="carousel-caption">
-													<h4>First Thumbnail label</h4>
-													<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</header>
+			<div id="que" class="container">
+				<div class="marketing">
+					<h1>¿Qué es Colaboratorio?</h1>
+					<p class="marketing-byline">Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
+					<div class="row-fluid">
+						<div class="span4">
+							<h2>Cultura libre</h2>
+							<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software libre</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
+						</div>
+						<div class="span4">
+							<h2>Arte y Ciencia</h2>
+							<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
+						</div>
+						<div class="span4">
+							<h2>Colaboratorio</h2>
+							<p>Colaboratorio es nuestra respuesta a estas dos situaciones. Un espacio digital y físico dedicado a <strong>explorar la riqueza y posibilidades de la cultura libre</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+						</div>
+						<div class="span4">
+							<h2>Todo empezó en un garaje…</h2>
+							<p>¿Qué mejor lugar para empezar Colaboratorio que nuestro propio garaje? Estamos situados en la calle Marroquíes en el barrio de Santa Marina, justo al lado de los jardines de Colón. <a href="http://maps.google.es/maps?q=colaborativa+&hl=es&sll=37.890536,-4.775723&sspn=0.01265,0.027874&hq=colaborativa&t=m&z=16">Mapa</a></p>
+						</div>
+						<div class="span4">
+							<h2>Recursos a cambio de cultura libre</h2>
+							<p>Ofrecemos, dentro de nuestras posibilidades, un espacio de trabajo, apoyo técnico y herramientas <strong>sin coste alguno</strong>. A cambio te pediremos que liberes el proyecto con una <strong>licencia libre de tu elección</strong> y que mantengas una pequeña wiki sobre el proyecto en nuestra web.</p>
+						</div>
+						<div class="span4">
+							<h2>Líneas de trabajo</h2>
+							<p>Los proyectos en Colaboratorio se organizan a través de líneas de trabajo o temáticas relacionadas con la <strong>cultura libre</strong>. Dentro de estas lineas se irán proponiendo talleres, proyectos y eventos.</p>
+						</div>
+					</div>
+					<hr id="proyectos" class="soften">
+					<h1 >Proyectos, talleres y eventos</h1>
+					<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado de las actividades</p>
+					<div class="row-fluid">
+						<ul class="thumbnails">
+							{% for event in site.categories['evento'] reversed %}
+							<li class="span4">
+								<div class="thumbnail">
+									<a href="#myModal" data-toggle="modal"><img src="imagenes/{{ event.slug }}.jpg" alt=""></a>
+									<div class="caption">
+										<h2>{{ event.title }}</h2>
+										<h4>{{ event.subtitle }}</h4>
+										<p>{{ event.content }}</p>
+										<p>
+											{% for tag in event.tags %}
+												{% if tag.license %}
+													<span class="label label-info">{{ tag.license }}</span>
+												{% else %}
+													<span class="label">{{ tag }}</span>
+												{% endif %}
+											{% endfor %}
+										</p>
+									</div>
+									<!-- Modal -->
+									<div id="myModal" class="modal hide fade custom-height-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+											<h2>{{ event.title }}</h2>
+											<h4>{{ event.subtitle }}</h4>
+										</div>
+										<div class="modal-body">
+											<div id="myCarousel" class="carousel slide">
+												<!-- Carousel items -->
+												<div class="carousel-inner">
+													<div class="active item">
+														<img src="http://farm8.staticflickr.com/7206/6973688705_9c7c173d88_c.jpg" alt="">
+														<div class="carousel-caption">
+															<h4>First Thumbnail label</h4>
+															<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+														</div>
+													</div>
 												</div>
+												<!-- Carousel nav -->
+												<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+												<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 											</div>
 										</div>
-										<!-- Carousel nav -->
-										<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-										<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 									</div>
 								</div>
-							</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<hr id="como" class="soften">
+					<h1>¿Cómo funciona el colaboratorio?</h1>
+					<p class="marketing-byline">¿Quieres participar?</p>
+					<div class="row-fluid">
+						<div class="span4">
+							<h2>Cultura libre</h2>
+							<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software libre</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
 						</div>
-					</li>
-					{% endfor %}
-				</ul>
+						<div class="span4">
+							<h2>Arte y Ciencia</h2>
+							<p>Tradicionalmente nuestra sociedad se ha conformado mediante la división del arte y la ciencia. Esta división ha dañado gravemente nuestros sistemas educativos, organismos culturales, instituciones científicas y valores sociales.</p>
+						</div>
+						<div class="span4">
+							<h2>Colaboratorio</h2>
+							<p>Colaboratorio es nuestra respuesta a estas dos situaciones. Un espacio digital y físico dedicado a <strong>explorar la riqueza y posibilidades de la cultura libre</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		{% include _footer.html %}
+		<footer class="footer">
+			<div class="container">
+				<p>Un proyecto de @javiburon y @msanchezmora para @colaborativaeu. Diseñado y hecho en <a href="http://www.openstreetmap.org/?lat=37.86&lon=-4.76&zoom=8&layers=M">Córdoba, Andalucía</a></p>
+				<p><a href="https://github.com/colaborativa/colaboratorio">El código de esta página</a> está licenciado bajo una <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">MIT license</a>. Los textos e imágenes bajo una licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+				<p>Utilizamos las siguientes herramientas y recursos de código abierto: <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://pages.github.com/">github pages</a>, <a href="https://github.com/mojombo/jekyll/wiki">jekyll</a> y <a href="http://lesscss.org/">LESS</a>. Iconos de <a href="http://glyphicons.com">Glyphicons</a>, bajo licencia creative commons <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+			</div>
+		</footer>
 		<!-- Button to trigger modal -->
-	<!-- Le javascript
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<!-- Le javascript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="js/jquery.js"></script>
+			<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
