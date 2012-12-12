@@ -2,6 +2,12 @@ $(function () {
 
     module("bootstrap-modal")
 
+      test("should provide no conflict", function () {
+        var modal = $.fn.modal.noConflict()
+        ok(!$.fn.modal, 'modal was set back to undefined (org value)')
+        $.fn.modal = modal
+      })
+
       test("should be defined on jquery object", function () {
         var div = $("<div id='modal-test'></div>")
         ok(div.modal, 'modal method is defined')
@@ -25,6 +31,35 @@ $(function () {
             ok($('#modal-test').length, 'modal insterted into dom')
             $(this).remove()
             start()
+          })
+          .modal("show")
+      })
+
+      test("should fire show event", function () {
+        stop()
+        $.support.transition = false
+        $("<div id='modal-test'></div>")
+          .bind("show", function () {
+            ok(true, "show was called")
+          })
+          .bind("shown", function () {
+            $(this).remove()
+            start()
+          })
+          .modal("show")
+      })
+
+      test("should not fire shown when default prevented", function () {
+        stop()
+        $.support.transition = false
+        $("<div id='modal-test'></div>")
+          .bind("show", function (e) {
+            e.preventDefault()
+            ok(true, "show was called")
+            start()
+          })
+          .bind("shown", function () {
+            ok(false, "shown was called")
           })
           .modal("show")
       })

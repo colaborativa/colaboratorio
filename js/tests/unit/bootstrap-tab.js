@@ -2,6 +2,12 @@ $(function () {
 
     module("bootstrap-tabs")
 
+      test("should provide no conflict", function () {
+        var tab = $.fn.tab.noConflict()
+        ok(!$.fn.tab, 'tab was set back to undefined (org value)')
+        $.fn.tab = tab
+      })
+
       test("should be defined on jquery object", function () {
         ok($(document.body).tab, 'tabs method is defined')
       })
@@ -40,6 +46,41 @@ $(function () {
 
         $(pillsHTML).find('li:first a').tab('show')
         equals($("#qunit-fixture").find('.active').attr('id'), "home")
+      })
+
+
+      test("should not fire closed when close is prevented", function () {
+        $.support.transition = false
+        stop();
+        $('<div class="tab"/>')
+          .bind('show', function (e) {
+            e.preventDefault();
+            ok(true);
+            start();
+          })
+          .bind('shown', function () {
+            ok(false);
+          })
+          .tab('show')
+      })
+
+      test("show and shown events should reference correct relatedTarget", function () {
+        var dropHTML =
+            '<ul class="drop">'
+          + '<li class="dropdown"><a data-toggle="dropdown" href="#">1</a>'
+          + '<ul class="dropdown-menu">'
+          + '<li><a href="#1-1" data-toggle="tab">1-1</a></li>'
+          + '<li><a href="#1-2" data-toggle="tab">1-2</a></li>'
+          + '</ul>'
+          + '</li>'
+          + '</ul>'
+
+        $(dropHTML).find('ul>li:first a').tab('show').end()
+          .find('ul>li:last a').on('show', function(event){
+            equals(event.relatedTarget.hash, "#1-1")
+          }).on('shown', function(event){
+            equals(event.relatedTarget.hash, "#1-1")
+          }).tab('show')
       })
 
 })

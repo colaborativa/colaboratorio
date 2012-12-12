@@ -2,6 +2,12 @@ $(function () {
 
     module("bootstrap-alerts")
 
+      test("should provide no conflict", function () {
+        var alert = $.fn.alert.noConflict()
+        ok(!$.fn.alert, 'alert was set back to undefined (org value)')
+        $.fn.alert = alert
+      })
+
       test("should be defined on jquery object", function () {
         ok($(document.body).alert, 'alert method is defined')
       })
@@ -36,6 +42,21 @@ $(function () {
         alert.find('.close').click()
 
         ok(!$('#qunit-fixture').find('.alert-message').length, 'element removed from dom')
+      })
+
+      test("should not fire closed when close is prevented", function () {
+        $.support.transition = false
+        stop();
+        $('<div class="alert"/>')
+          .bind('close', function (e) {
+            e.preventDefault();
+            ok(true);
+            start();
+          })
+          .bind('closed', function () {
+            ok(false);
+          })
+          .alert('close')
       })
 
 })

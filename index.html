@@ -14,7 +14,6 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 	{% include _googleanalytics.html %}
 </head>
 <body data-spy="scroll">
-	{% include _facebooklike.html %}
 	{% include _navbar.html %}
 	<div class="container">
 		<header class="jumbotron masthead">
@@ -70,48 +69,61 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado de las actividades</p>
 			<div class="row">
 				<ul class="thumbnails">
+					{% for event in site.categories['evento'] reversed %}
 					<li class="span4">
 						<div class="thumbnail">
-							<img src="imagenes/repraphuxley.jpg" alt="">
+							<a href="#myModal" data-toggle="modal"><img src="imagenes/{{ event.slug }}.jpg" alt=""></a>
 							<div class="caption">
-								<h2>Proyecto RepRapPro Huxley</h2>
-								<h4>Montaje de una impresora 3D autoreplicable</h4>
-								<p>Iniciamos Colaboratorio con el montaje esta pequeña impresora 3D basada en hardware libre y un diseño que permite la autoreplicación. Si quieres introducirte en el mundo de la fabricación digital o simplemente te interesa replicarte esta impresora estás invitado a participar.</p>
-								<p><a href="https://github.com/colaborativa/colaboratorio/wiki/Proyecto-Reprap-Huxley">Más Información y cómo participar en la wiki del proyecto</a></p>
-								<p><span class="label">Fabricación digital</span> <span class="label">Hardware Libre</span> <span class="label">Proyecto</span> <span class="label label-info">GNU General Public Licence</span></p>
+								<h2>{{ event.title }}</h2>
+								<h4>{{ event.subtitle }}</h4>
+								<p>{{ event.content }}</p>
+								<p>
+									{% for tag in event.tags %}
+										{% if tag.license %}
+											<span class="label label-info">{{ tag.license }}</span>
+										{% else %}
+											<span class="label">{{ tag }}</span>
+										{% endif %}
+									{% endfor %}
+								</p>
 							</div>
-						 </div>
-					</li>
-					<li class="span4">
-						<div class="thumbnail">
-							<img src="imagenes/botas7leguas.jpg" alt="">
-							<div class="caption">
-								<h2>Botas de siete leguas</h2>
-								<h4>Grabación de un podcast sobre mobilidad sostenible</h4>
-								<p>La nueva temporada de este podcast sobre movilidad se grabará en Colaboratorio. <a href="http://www.ivoox.com/podcast-podcast-programa-botas-siete-leguas_sq_f111311_1.html">"Botas de Siete Leguas"</a> está realizado por personas pertenecientes al entorno del Grupo Permanente de Movilidad Sostenible, de El Consejo de la Juventud, la Plataforma Carril Bici y la Asociación Peatonal Cordobesa A Pata.</p>
-								<p><a href="https://github.com/colaborativa/colaboratorio/wiki/Podcast%3A-Botas-de-siete-leguas">Wiki de las "Botas de siete leguas"</a></p>
-								<p><span class="label">Medios libres</span> <span class="label">Podcast</span> <span class="label">Evento</span> <span class="label label-info">CC BY-NC-SA 3.0</span></p>
+							<!-- Modal -->
+							<div id="myModal" class="modal hide fade custom-height-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+									<h2>{{ event.title }}</h2>
+									<h4>{{ event.subtitle }}</h4>
+								</div>
+								<div class="modal-body">
+									<div id="myCarousel" class="carousel slide">
+										<!-- Carousel items -->
+										<div class="carousel-inner">
+											<div class="active item">
+												<img src="http://farm8.staticflickr.com/7206/6973688705_9c7c173d88_c.jpg" alt="">
+												<div class="carousel-caption">
+													<h4>First Thumbnail label</h4>
+													<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+												</div>
+											</div>
+										</div>
+										<!-- Carousel nav -->
+										<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+										<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
-					<li class="span4">
-						<div class="thumbnail">
-							<img src="imagenes/colaboratorio-proximamente.jpg" alt="">
-							<div class="caption">
-							</div>
-						</div>
-					</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
 		{% include _footer.html %}
-	</div>
+		<!-- Button to trigger modal -->
 	<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="js/jquery.js"></script>
-		<script src="js/application.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/bootstrap-scrollspy.js"></script>
 	</body>
 </html>
