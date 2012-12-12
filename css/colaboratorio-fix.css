@@ -1,5 +1,8 @@
 /* fix id que para que se posicione guay */
-
+div[id^="galleria"]{height:320px;}
+.galleria-errors{
+	display:none;
+}
 #que{
 	padding-top: 30px;
 }

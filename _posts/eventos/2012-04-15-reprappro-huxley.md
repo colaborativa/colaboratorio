@@ -3,7 +3,7 @@ title: Proyecto RepRapPro Huxley
 subtitle: Montaje de una impresora 3D autoreplicable
 category: evento
 slug: reprappro-huxley
-flickr-set: 
+flickr-set: 72157629828078788
 tags:
  - Fabricación digital
  - Hardware Libre
