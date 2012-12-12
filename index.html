@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y la tecnología
+title: Colaboratorio
+subtitle: Espacio de cultura libre en torno a la ciencia, el arte y la tecnología
 ---
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</title>
+	<title>{{ page.title }} | {{ page.subtitle }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{% include _socialmeta.html %}
 	{% include _headscripts.html %}
@@ -18,25 +19,16 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 	<div class="container">
 		<header class="jumbotron masthead">
 			<div class="inner">
-				<h1>Colaboratorio</h1>
+				<h1>{{ page.title }}</h1>
 				<p>Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
 				{% include _quicklinks.html %}
 			</div>
 		</header>
-		{% comment %}
-		<div class="subnav" >
-			<ul class="nav nav-pills">
-				<li><a href="#que">¿Qué es?</a></li>
-				<li><a href="#como">¿Cómo funciona?</a></li>
-			</ul>
-		</div>
-		<hr/>
-		{% endcomment %}
 		<hr class="soften">
 		<div class="marketing">
 			<h1>¿Qué es Colaboratorio?</h1>
 			<p class="marketing-byline">Espacio de cultura libre en torno a la ciencia, el arte y la tecnología</p>
-			<div class="row">
+			<div class="row-fluid">
 				<div class="span4">
 					<h2>Cultura libre</h2>
 					<p>El vertiginoso ritmo de innovación tecnológica e intelectual en el movimiento del <strong>software libre</strong> ha generado auténticas revoluciones en la forma de entender la cultura, la creación y la colaboración entre individuos y grupos.</p>
@@ -49,8 +41,6 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 					<h2>Colaboratorio</h2>
 					<p>Colaboratorio es nuestra respuesta a estas dos situaciones. Un espacio digital y físico dedicado a <strong>explorar la riqueza y posibilidades de la cultura libre</strong> con una actitud reconciliadora frente al arte, la ciencia y la tecnología.</p>
 				</div>
-			</div>
-			<div class="row">
 				<div class="span4">
 					<h2>Todo empezó en un garaje…</h2>
 					<p>¿Qué mejor lugar para empezar Colaboratorio que nuestro propio garaje? Estamos situados en la calle Marroquíes en el barrio de Santa Marina, justo al lado de los jardines de Colón. <a href="http://maps.google.es/maps?q=colaborativa+&hl=es&sll=37.890536,-4.775723&sspn=0.01265,0.027874&hq=colaborativa&t=m&z=16">Mapa</a></p>
@@ -67,7 +57,7 @@ title: Colaboratorio | Espacio de cultura libre en torno a la ciencia, el arte y
 			<hr class="soften">
 			<h1 id="proyectos">Proyectos, talleres y eventos</h1>
 			<p class="marketing-byline">Subscríbete a nuestra lista de correo o síguenos por Twitter y te mantendremos informado de las actividades</p>
-			<div class="row">
+			<div class="row-fluid">
 				<ul class="thumbnails">
 					{% for event in site.categories['evento'] reversed %}
 					<li class="span4">

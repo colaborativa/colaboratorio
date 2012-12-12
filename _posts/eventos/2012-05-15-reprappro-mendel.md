@@ -1,8 +1,8 @@
 ---
-title: Proyecto RepRapPro Huxley
+title: Proyecto RepRapPro Mendel
 subtitle: Montaje de una impresora 3D autoreplicable
 category: evento
-slug: reprappro-huxley
+slug: reprappro-mendel
 flickr-set: 
 tags:
  - Fabricación digital

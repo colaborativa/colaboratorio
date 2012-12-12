@@ -1,0 +1,63 @@
+/* this is for fixing line heigh problems in narrow screens */
+h1, h2, h3 {
+	line-height: 25px!important;
+}
+
+/* this is for allowing a single row for all the chapter and event elements changing the number of rows in different screen sizes */
+
+@media (min-width: 480px) and (max-width: 768px) {
+	.span4{
+		margin-left:0!important;
+	}
+	.thumbnail{
+		min-height: 520px!important;
+		background-color: white!important;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.span4:nth-child(3n+1){
+		margin-left:0!important;
+	}
+	.thumbnails .span4:nth-child(2n+1){
+		margin-left:0!important;
+	}
+	.thumbnails .span4{
+		margin-left:20px!important;
+		width:352px!important;
+	}
+	.thumbnail{
+		min-height: 520px!important;
+		background-color: white!important;
+	}
+}
+
+
+@media (min-width: 979px) and (max-width: 1209px) {
+	.span4:nth-child(3n+1){
+		margin-left:0!important;
+	}
+	.span4{
+		margin-left:20px!important;
+		width:290px!important;
+	}
+	.thumbnail{
+		min-height: 560px!important;
+		background-color: white!important;
+	}
+}
+
+@media (min-width: 1210px) {
+	.span4:nth-child(3n+1){
+		margin-left:0!important;
+	}
+	.span4{
+		margin-left:30px!important;
+		width:370px!important;
+	}
+	.thumbnail{
+		min-height: 520px!important;
+		background-color: white!important;
+	}
+}
