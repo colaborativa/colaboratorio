@@ -138,8 +138,8 @@ hr.soften {
   margin-bottom: 9px;
 }
 .marketing h1 {
-  margin: 36px 0 27px;
-  font-size: 40px;
+  margin: 32px 0 27px;
+  font-size: 45px;
   font-weight: 300;
   text-align: center;
 }
@@ -148,7 +148,7 @@ hr.soften {
   font-weight: 300;
 }
 .marketing h2 {
-  font-size: 22px;
+  font-size: 26px;
 }
 .marketing p {
   margin-right: 10px;
@@ -163,9 +163,9 @@ hr.soften {
   margin: 4px 5px 0 0;
 }
 .marketing-byline {
-  margin: -10px 0 27px;
-  font-size: 18px;
-  font-weight: 300;
+  margin: -15px 0 45px;
+  font-size: 20px;
+  font-weight: 400;
   line-height: 24px;
   color: #999;
   text-align: center;

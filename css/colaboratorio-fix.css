@@ -37,7 +37,7 @@ h2, h3 {
 		width:352px!important;
 	}
 	.thumbnail{
-		min-height: 520px!important;
+		min-height: 600px!important;
 		background-color: white!important;
 	}
 }
@@ -52,7 +52,7 @@ h2, h3 {
 		width:290px!important;
 	}
 	.thumbnail{
-		min-height: 560px!important;
+		min-height: 660px!important;
 		background-color: white!important;
 	}
 }
@@ -66,7 +66,7 @@ h2, h3 {
 		width:370px!important;
 	}
 	.thumbnail{
-		min-height: 520px!important;
+		min-height: 580px!important;
 		background-color: white!important;
 	}
 }

@@ -7,6 +7,8 @@ subtitle: Espacio de cultura libre en torno a la ciencia, el arte y la tecnolog√
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
+		<link href='css/bootstrap-modal.css' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
 		<title>{{ page.title }} | {{ page.subtitle }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,17 +98,7 @@ subtitle: Espacio de cultura libre en torno a la ciencia, el arte y la tecnolog√
 											{% endfor %}
 										</p>
 									</div>
-									<!-- Modal -->
-									<div id="myModal{{ forloop.index }}" class="modal hide fade custom-height-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">√ó</button>
-											<h2>{{ event.title }}</h2>
-											<h4>{{ event.subtitle }}</h4>
-										</div>
-										<div class="modal-body">
-											<div class="galleria" id="galleria{{ forloop.index }}"></div>	
-										</div>
-									</div>
+									
 								</div>
 							</li>
 							{% endfor %}
@@ -145,24 +137,37 @@ subtitle: Espacio de cultura libre en torno a la ciencia, el arte y la tecnolog√
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-modal.js"></script>
+		<script src="js/bootstrap-modalmanager.js"></script>
 			<!-- load Galleria -->
         <script src="js/galleria-1.2.8.min.js"></script>
         <!-- load flickr plugin -->
         <link type="text/css" rel="stylesheet" href="js/classic/galleria.classic.css">
         <script src="js/galleria.flickr.min.js"></script>
         {% for event in site.categories['evento'] reversed %}
-	        <script>
-			    // Load the classic theme
-			    Galleria.loadTheme('js/classic/galleria.classic.min.js');
-			    // Initialize Galleria
-			    Galleria.run('#galleria{{ forloop.index }}', {
-			        flickr: 'set:{{ event.flickr-set }}',
-			        flickrOptions: {
-			            sort: 'interestingness-desc',
-			            description: 'true'
-			        }
-			    });
-   			</script>
+	     //    <script>
+			   //  // Load the classic theme
+			   //  Galleria.loadTheme('js/classic/galleria.classic.min.js');
+			   //  // Initialize Galleria
+			   //  Galleria.run('#galleria{{ forloop.index }}', {
+			   //      flickr: 'set:{{ event.flickr-set }}',
+			   //      flickrOptions: {
+			   //          sort: 'interestingness-desc',
+			   //          description: 'true'
+			   //      }
+			   //  });
+   			// </script>
+   			<!-- Modal -->
+   			<div id="myModal{{ forloop.index }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   				<div class="modal-header">
+   					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">√ó</button>
+   					<h2>{{ event.title }}</h2>
+   					<h4>{{ event.subtitle }}</h4>
+   				</div>
+   				<div class="modal-body">
+   					<div class="galleria" id="galleria{{ forloop.index }}"></div>	
+   				</div>
+   			</div>
    		{% endfor %}
 	</body>
 </html>
