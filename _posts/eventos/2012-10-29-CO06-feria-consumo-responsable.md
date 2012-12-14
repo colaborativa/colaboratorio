@@ -3,7 +3,7 @@ title: Cultura Libre e Impresión 3D
 subtitle: Charla en la II Feria de Consumo Responsable de la UCO
 category: evento
 slug: culturalibre-impresion3d
-flickr-set: 72157629828078788
+flickr-set: 72157631894195191
 tags:
  - Fabricación digital
  - Hardware Libre
