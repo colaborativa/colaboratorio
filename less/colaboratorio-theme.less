@@ -1,0 +1,275 @@
+/* COLABORATORIO THEME FOR BOOTSTRAP, overwrites default bootstrap styles
+-------------------------------------------------- */
+
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+/* Body and structure
+-------------------------------------------------- */
+#homepage body {
+  position: relative;
+  padding-top: 0px;
+  background-color: #fff;
+  background-image: url(../img/grid-18px-masked.png);
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+}
+
+/* NABVAR THEMED
+-------------------------------------------------- */
+#homepage > .navbar{
+  background-color: none;
+  font-size: 13px;
+  position: relative;
+  .navbar-inner{
+    background-color: inherit;
+    background-image: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: none;
+    .box-shadow(0 1px 6px rgba(0,0,0,.2));
+  }
+  .nav{
+    margin: 0px;
+    padding: 0 100px;
+    .box-sizing(border-box);
+    width:100%;
+    li{
+      line-height: 55px;
+      .box-sizing(border-box);
+      width:33%;
+      text-align: center;
+      a{
+        padding:0px;
+        font-size: 18px;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+/* Change the docs' brand */
+#homepage > .navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0px;
+  position: absolute;
+  top:0px;
+  left:10px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+#homepage > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+
+/* Space out sub-sections more
+-------------------------------------------------- */
+section {
+  padding-top: 60px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 54px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  position: relative;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  h1 {
+    margin-bottom: 9px;
+    font-size: 71px;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  p {
+    margin-bottom: 18px;
+    font-weight: 300;
+  }
+}
+
+/* Masthead (docs home) */
+.masthead {
+  padding: 15px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: rgb(108, 164, 241);
+  h1, p{
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 5px;
+  }
+  p {
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+.masthead .inner{
+	background-image: url(../imagenes/colaboratoriogrid.jpg);
+	border: 1px solid white;
+	padding: 15px;
+	padding-bottom: 35px;
+	padding-top: 45px;
+  margin: 0 auto;
+  width: 960px;
+  height: 400px;
+}
+
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+.marketing .row {
+  margin-bottom: 9px;
+}
+.marketing h1 {
+  margin: 32px 0 27px;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+}
+.marketing .marketing-byline {
+  margin: -15px 0 45px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #999;
+  text-align: center;
+}
+.marketing h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+.marketing p {
+  margin-right: 10px;
+}
+
+/* THEMED que section */
+#que {
+  h1{
+    font-size: 50px;
+  }
+  .marketing-byline{
+    font-size: 24px;
+  }
+  h2{
+    text-align: center;
+    margin-bottom: 20px
+  }
+  p{
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+#proyectos{
+  .thumbnail{
+    h2{
+      font-size: 26px;
+    }
+    h4{
+      font-family: "Open Sans";
+      font-size: 18px;
+      font-weight: 300;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+}
+
+/* this is for fixing line heigh problems in narrow screens */
+h2, h3 {
+  line-height: 25px!important;
+}
+
+/* this is for allowing a single row for all the chapter and event elements changing the number of rows in different screen sizes */
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .span4{
+    margin-left:0!important;
+  }
+  .thumbnail{
+    min-height: 520px!important;
+    background-color: white!important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .span4:nth-child(3n+1){
+    margin-left:0!important;
+  }
+  .thumbnails .span4:nth-child(2n+1){
+    margin-left:0!important;
+  }
+  .thumbnails .span4{
+    margin-left:20px!important;
+    width:352px!important;
+  }
+  .thumbnail{
+    min-height: 600px!important;
+    background-color: white!important;
+  }
+}
+
+
+@media (min-width: 979px) and (max-width: 1209px) {
+  .span4:nth-child(3n+1){
+    margin-left:0!important;
+  }
+  .span4{
+    margin-left:20px!important;
+    width:290px!important;
+  }
+  .thumbnail{
+    min-height: 660px!important;
+    background-color: white!important;
+  }
+}
+
+@media (min-width: 1210px) {
+  .span4:nth-child(3n+1){
+    margin-left:0!important;
+  }
+  .span4{
+    margin-left:30px!important;
+    width:370px!important;
+  }
+  .thumbnail{
+    min-height: 580px!important;
+    background-color: white!important;
+  }
+}

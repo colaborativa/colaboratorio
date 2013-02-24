@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
+		<link href='css/bootstrap-modal.css' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<title>{{ page.title }} | {{ page.subtitle }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% include _socialmeta.html %}
+		{% include _headscripts.html %}
+		{% include _googleanalytics.html %}
+	</head>
+	<body id="homepage" data-spy="scroll">
+		<header class="jumbotron masthead">
+			<div class="container">
+				<div class="inner">
+					<h1>{{ page.title }}</h1>
+					<p>{{ page.subtitle }}</p>
+				</div>
+			</div>
+		</header>
+		<div class="navbar navbar-inverse"> <!-- needs to get navbar-fixed-top class when scrolling down -->
+		  <div class="navbar-inner">
+		    <div class="container">
+		      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="brand" href="./index.html">{{ page.title }}</a>
+		      <div class="nav-collapse collapse">
+		        <ul class="nav">
+		          <li><a href="#que">{{ page.section1.title }}</a></li>
+		          <li><a href="#proyectos">{{ page.section2.title }}</a></li>
+		          <li><a href="#como">{{ page.section3.title }}</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="container">
+			<div class="marketing">
+				<div id="que">
+					<h1>{{ page.section1.title }}</h1>
+					<p class="marketing-byline">{{ page.section1.subtitle }}</p>
+					<div class="row-fluid">
+						<div class="span4">
+							<h2>{{ page.section1.subSection1.title }}</h2>
+							<p>{{ page.section1.subSection1.blurb }}</p>
+						</div>
+						<div class="span4">
+							<h2>{{ page.section1.subSection2.title }}</h2>
+							<p>{{ page.section1.subSection2.blurb }}</p>
+						</div>
+						<div class="span4">
+							<h2>{{ page.section1.subSection3.title }}</h2>
+							<p>{{ page.section1.subSection3.blurb }}</p>
+						</div>
+					</div>
+				</div>
+				<hr class="soften">
+				<div id="proyectos">
+					<h1>{{ page.section2.title }}</h1>
+					<p class="marketing-byline">{{ page.section2.subtitle }}</p>
+					<div class="row-fluid">
+						<div class="span4">
+						</div>
+						<div class="span4 offset4">
+							{% include _quicklinks.html %}
+						</div>
+					</div>
+					<div class="row-fluid">
+						<ul class="thumbnails">
+							{% for event in site.categories['evento'] reversed %}
+							<li class="span4">
+								<div class="thumbnail">
+									<a href="#myModal{{ forloop.index }}" data-toggle="modal"><img src="imagenes/{{ event.slug }}.jpg" alt=""></a>
+									<div class="caption">
+										<h2>{{ event.title }}</h2>
+										<h4>{{ event.subtitle }}</h4>
+										<p>{{ event.content }}</p>
+										<p>
+											{% for tag in event.tags %}
+												{% if tag.license %}
+													<span class="label label-info">{{ tag.license }}</span>
+												{% else %}
+													<span class="label">{{ tag }}</span>
+												{% endif %}
+											{% endfor %}
+										</p>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				<hr class="soften">
+				<div id="como">
+					<h1>{{ page.section3.title }}</h1>
+					<p class="marketing-byline">{{ page.section3.subtitle }}</p>
+					<div class="row-fluid">
+						<div class="span6">
+							<h2>{{ page.section3.subSection1.title }}</h2>
+							<p>{{ page.section3.subSection1.blurb }}</p>
+						</div>
+						<div class="span6">
+							<h2>{{ page.section3.subSection2.title }}</h2>
+							<p>{{ page.section3.subSection2.blurb }}</p>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class="span6">
+							<h2>{{ page.section3.subSection3.title }}</h2>
+							<p>{{ page.section3.subSection3.blurb }}</p>
+						</div>
+						<div class="span6">
+							<h2>{{ page.section3.subSection4.title }}</h2>
+							<p>{{ page.section3.subSection4.blurb }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p>{{ page.footer.footer1 | markdown }}</p>
+			<p>{{ page.footer.footer2 | markdown }}</p>
+			<p>{{ page.footer.footer3 | markdown }}</p>
+		</div>
+	</footer>
+	<!-- Button to trigger modal -->
+	<!-- Le javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>
