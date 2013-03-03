@@ -10,24 +10,27 @@
 		{% include _headscripts.html %}
 		{% include _googleanalytics.html %}
 	</head>
-	<body id="homepage" data-spy="scroll">
-		<header class="jumbotron masthead">
-			<div class="container">
-				<div class="inner">
-					<h1>{{ page.title }}</h1>
-					<p>{{ page.subtitle }}</p>
+	<body id="homepage" data-spy="scroll" data-retina="true">
+		<div id="firma">
+			<a href="http://colaborativa.eu" data-retina="true"><span class="oculto">Un proyecto de Colaborativa.eu</span></a> 
+		</div>
+		<header class="jumbotron">
+				<ul class="galeria">
+					<li><img src="imagenes/colaboratorio-poster01.jpg" alt=""></li>
+				</ul>
+				<div class="grid" data-retina="true">
 				</div>
-			</div>
+				<div class="inner">
+					<hgroup>
+						<h1>{{ page.title }}</h1>
+						<p>{{ page.subtitle }}</p>
+					</hgroup>				
+				</div>
+				
 		</header>
 		<div class="navbar navbar-inverse"> <!-- needs to get navbar-fixed-top class when scrolling down -->
 		  <div class="navbar-inner">
 		    <div class="container">
-		      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="brand" href="./index.html">{{ page.title }}</a>
 		      <div class="nav-collapse collapse">
 		        <ul class="nav">
 		          <li><a href="#que">{{ page.section1.title }}</a></li>
@@ -44,28 +47,25 @@
 					<h1>{{ page.section1.title }}</h1>
 					<p class="marketing-byline">{{ page.section1.subtitle }}</p>
 					<div class="row-fluid">
-						<div class="span4">
+						<div class="span4 garaje">
 							<h2>{{ page.section1.subSection1.title }}</h2>
 							<p>{{ page.section1.subSection1.blurb }}</p>
 						</div>
-						<div class="span4">
+						<div class="span4 arte-ciencia">
 							<h2>{{ page.section1.subSection2.title }}</h2>
 							<p>{{ page.section1.subSection2.blurb }}</p>
 						</div>
-						<div class="span4">
+						<div class="span4 cultura-libre">
 							<h2>{{ page.section1.subSection3.title }}</h2>
 							<p>{{ page.section1.subSection3.blurb }}</p>
 						</div>
 					</div>
 				</div>
-				<hr class="soften">
 				<div id="proyectos">
 					<h1>{{ page.section2.title }}</h1>
 					<p class="marketing-byline">{{ page.section2.subtitle }}</p>
 					<div class="row-fluid">
-						<div class="span4">
-						</div>
-						<div class="span4 offset4">
+						<div class="span12 formulario">
 							{% include _quicklinks.html %}
 						</div>
 					</div>
@@ -95,7 +95,6 @@
 						</ul>
 					</div>
 				</div>
-				<hr class="soften">
 				<div id="como">
 					<h1>{{ page.section3.title }}</h1>
 					<p class="marketing-byline">{{ page.section3.subtitle }}</p>
@@ -125,9 +124,9 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<p>{{ page.footer.footer1 | markdown }}</p>
-			<p>{{ page.footer.footer2 | markdown }}</p>
-			<p>{{ page.footer.footer3 | markdown }}</p>
+			<p>{{ page.footer.footer1 | markdownify }}</p>
+			<p>{{ page.footer.footer2 | markdownify }}</p>
+			<p>{{ page.footer.footer3 | markdownify }}</p>
 		</div>
 	</footer>
 	<!-- Button to trigger modal -->
@@ -135,5 +134,6 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="js/jquery.js"></script>
+	<script src="js/libs/retina-replace.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </html>

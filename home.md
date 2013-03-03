@@ -38,9 +38,9 @@ section3:
   blurb: "Somos Colaborativa, una agencia de diseño, tecnología y acción social ubicada en Córdoba, España. Hemos trabajado en centros de arte, departamentos de investigación, enseñanza universitaria, el sector privado de la ingeniería y como diseñadores freelance."
 
 footer:
- footer1: "Un proyecto de @javiburon y @msanchezmora para @colaborativaeu. Diseñado y hecho en [Córdoba, Andalucía](http://www.openstreetmap.org/?lat=37.86&lon=-4.76&zoom=8&layers=M)"
+ footer1: "Un proyecto de @javiburon y @msanchezmora para @colaborativaeu. Diseñado y hecho en [Córdoba, Andalucía](http://www.openstreetmap.org/?lat=37.86&lon=-4.76&zoom=8&layers=M). [El código de esta página](https://github.com/colaborativa/colaboratorio) está licenciado bajo una [MIT license](http://www.apache.org/licenses/LICENSE-2.0). Los textos e imágenes bajo una licencia creative commons [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 
- footer2: "[El código de esta página](https://github.com/colaborativa/colaboratorio) está licenciado bajo una [MIT license](http://www.apache.org/licenses/LICENSE-2.0). Los textos e imágenes bajo una licencia creative commons [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
+ footer2: ""
 
  footer3: "Utilizamos las siguientes herramientas y recursos de código abierto [Bootstrap](http://twitter.github.com/bootstrap/), [github pages](http://pages.github.com/), [jekyll](https://github.com/mojombo/jekyll/wiki) [LESS](http://lesscss.org/). Iconos de [Glyphicons](http://glyphicons.com), bajo licencia creative commons [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)"
 ---
