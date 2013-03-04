@@ -202,6 +202,26 @@ hr.soften {
     }
   }
 }
+
+/* * tumbnail shadow enhancement */
+
+.thumbnail{
+  .box-shadow(0 0px 10px rgba(0,0,0,.5));
+  position: relative;
+  .etiquetas{
+    @media (min-width: 768px){
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
+.seccion{
+  @media (min-width: 320px) and (max-width: 768px) {
+    .box-sizing(border-box);
+    margin: 20px 40px;
+  }
+}
+
 /* Marketing section of Overview
 -------------------------------------------------- */
 .marketing .row {
@@ -259,7 +279,6 @@ hr.soften {
     background: url(../imagenes/cultura-libre.png) top center no-repeat;
   }
 }
-
 #proyectos{
   padding-top: 60px;
   margin-bottom: 90px;
@@ -309,6 +328,10 @@ hr.soften {
     color: white;
     text-decoration: underline;
   }
+  @media (min-width: 320px) and (max-width: 768px){
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 /* this is for fixing line heigh problems in narrow screens */
@@ -323,18 +346,13 @@ h2, h3 {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .row-fluid > [class*="span"]{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 0px;
-    padding-bottom: 30px;
-  }
   .span4{
     margin-left:0!important;
   }
   .thumbnail{
     min-height: 520px!important;
     background-color: white!important;
+
   }
 }
 
@@ -352,7 +370,7 @@ h2, h3 {
     width:352px!important;
   }
   .thumbnail{
-    min-height: 600px!important;
+    min-height: 640px!important;
     background-color: white!important;
   }
 }
@@ -381,7 +399,7 @@ h2, h3 {
     width:370px!important;
   }
   .thumbnail{
-    min-height: 580px!important;
+    min-height: 590px!important;
     background-color: white!important;
   }
 }

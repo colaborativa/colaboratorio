@@ -42,7 +42,7 @@
 		</div>
 		<div class="container">
 			<div class="marketing">
-				<div id="que">
+				<div id="que" class="seccion">
 					<h1>{{ page.section1.title }}</h1>
 					<p class="marketing-byline">{{ page.section1.subtitle }}</p>
 					<div class="row-fluid">
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="proyectos">
+				<div id="proyectos" class="seccion">
 					<h1>{{ page.section2.title }}</h1>
 					<p class="marketing-byline">{{ page.section2.subtitle }}</p>
 					<div class="row-fluid">
@@ -78,7 +78,7 @@
 										<h2>{{ event.title }}</h2>
 										<h4>{{ event.subtitle }}</h4>
 										<p>{{ event.content }}</p>
-										<p>
+										<div class="etiquetas">
 											{% for tag in event.tags %}
 												{% if tag.license %}
 													<span class="label label-info">{{ tag.license }}</span>
@@ -86,7 +86,7 @@
 													<span class="label">{{ tag }}</span>
 												{% endif %}
 											{% endfor %}
-										</p>
+										</div>
 									</div>
 								</div>
 							</li>
@@ -94,7 +94,7 @@
 						</ul>
 					</div>
 				</div>
-				<div id="como">
+				<div id="como" class="seccion">
 					<h1>{{ page.section3.title }}</h1>
 					<p class="marketing-byline">{{ page.section3.subtitle }}</p>
 					<div class="row-fluid">
