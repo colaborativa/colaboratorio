@@ -72,6 +72,8 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 #homepage > .navbar .navbar-inner {
+  padding: 0px;
+  margin: 0px;
   background-color: inherit;
   background-image: none;
   -webkit-border-radius: 0px;
@@ -83,12 +85,14 @@ footer {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 #homepage > .navbar .nav {
-  margin: 0px;
-  padding: 0 50px;
+  margin: 0px auto;
+  padding: 0 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  max-width: 1170px;
   width: 100%;
+  float: none;
 }
 #homepage > .navbar .nav .active {
   background-color: rgba(0, 0, 0, 0.15);
@@ -101,7 +105,7 @@ footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 33%;
+  width: 33.333333333333336%;
   text-align: center;
 }
 #homepage > .navbar .nav li:hover {
@@ -340,6 +344,9 @@ hr.soften {
   padding-top: 60px;
   margin-bottom: 90px;
 }
+#que .marketing-byline {
+  font-size: 24px;
+}
 #que h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -383,6 +390,7 @@ hr.soften {
   margin-bottom: 40px;
 }
 #como .marketing-byline {
+  font-size: 24px;
   margin-bottom: 80px;
 }
 #como h2 {
