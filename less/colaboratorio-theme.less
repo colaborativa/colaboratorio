@@ -244,12 +244,14 @@ hr.soften {
   position: absolute;
   top:0px;
   .imagen{
+    /* La imagenes serán del 16:9 */
     height:450px;
     width: 100%;
   }
   @media (max-width: 1210px) {
     .imagen{
-      background-size: auto 450px!important;
+      /* Calculado para que la transición sea suave*/
+      background-size: auto 615px!important;
     }
   }
   @media (min-width: 1210px) {
