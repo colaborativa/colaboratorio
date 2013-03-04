@@ -44,6 +44,13 @@ footer {
   padding: 30px 0;
   margin-top: 70px;
 }
+.oculto {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6 & 7 */
+
+  clip: rect(1px, 1px, 1px, 1px);
+}
 #firma a {
   width: 128px;
   height: 128px;
@@ -52,13 +59,6 @@ footer {
   left: 0px;
   background: url(/imagenes/ribbon.png) top left no-repeat;
   z-index: 1000;
-}
-#firma a .oculto {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6 & 7 */
-
-  clip: rect(1px, 1px, 1px, 1px);
 }
 /* NABVAR THEMED
 -------------------------------------------------- */
@@ -204,21 +204,40 @@ hr.soften {
   height: 450px;
   background-color: black;
   overflow: hidden;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.8);
 }
-.jumbotron h1 {
+.jumbotron .inner h1 {
   text-align: center;
-  margin-bottom: 9px;
-  margin-top: 150px;
   font-size: 100px;
   letter-spacing: -1px;
   line-height: 1;
+  width: 100%;
+  height: 450px;
+  background: url(/imagenes/logo.png) center center no-repeat;
 }
-.jumbotron p {
+@media (max-width: 979px) {
+  .jumbotron .inner h1 {
+    background-size: 100% auto!important;
+  }
+}
+@media (min-width: 979px) {
+  .jumbotron .inner h1 {
+    background-size: 70% auto!important;
+  }
+}
+.jumbotron h2 {
+  position: absolute;
+  top: 280px;
+  width: 100%;
   font-size: 28px;
+  line-height: 28px;
   text-align: center;
   margin-bottom: 18px;
   font-weight: 400;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 40px;
 }
 /* Masthead (docs home) */
 .jumbotron .inner {
@@ -226,7 +245,7 @@ hr.soften {
   height: 450px;
   position: absolute;
   top: 0px;
-  background: url(../imagenes/overlay.png) top center no-repeat;
+  background: url(/imagenes/overlay.png) top center no-repeat;
   margin: 0 auto;
   padding: 0px;
 }
@@ -298,6 +317,7 @@ hr.soften {
   font-family: "colaborativaMedium";
   margin: 0px 0 30px;
   font-size: 50px;
+  line-height: 50px;
   font-weight: 300;
   text-align: center;
 }
@@ -319,12 +339,6 @@ hr.soften {
 #que {
   padding-top: 60px;
   margin-bottom: 90px;
-}
-#que h1 {
-  font-size: 50px;
-}
-#que .marketing-byline {
-  font-size: 24px;
 }
 #que h2 {
   text-align: center;
@@ -369,7 +383,6 @@ hr.soften {
   margin-bottom: 40px;
 }
 #como .marketing-byline {
-  font-size: 24px;
   margin-bottom: 80px;
 }
 #como h2 {
