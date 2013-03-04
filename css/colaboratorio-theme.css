@@ -278,10 +278,19 @@ hr.soften {
   top: 0px;
 }
 .galeria .imagen {
+  position: relative;
   /* La imagenes serán del 16:9 */
 
   height: 450px;
   width: 100%;
+}
+.galeria .imagen .creditos {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
 }
 @media (max-width: 1210px) {
   .galeria .imagen {
