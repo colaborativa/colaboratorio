@@ -161,13 +161,18 @@ hr.soften {
 
 .jumbotron .inner{
   width:100%;
+  height: 450px;
   position: absolute;
   top:0px;
 	background: url(../imagenes/overlay.png) top center no-repeat;
-  width:100%;
   margin: 0 auto;
   padding:0px;
-  height: 450px;
+  @media (max-width: 979px) {
+    background-size: 979px 450px!important;
+  }
+  @media (min-width: 979px) {
+    background-size: 100% 450px!important;
+  }
 }
 .grid{
   width:100%;
@@ -177,20 +182,24 @@ hr.soften {
   background: url(/imagenes/grid-transparent.png) top center;
 }
 .galeria {
+  margin: 0px;
+  padding: 0px;
   width:100%;
   position: absolute;
   top:0px;
-  li{
+  .imagen{
+    height:450px;
     width: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -525px;
-
   }
-  img{
-    max-width: 1050px;
-    width: 1050px;
-    height: 450px;
+  @media (max-width: 1210px) {
+    .imagen{
+      background-size: auto 450px!important;
+    }
+  }
+  @media (min-width: 1210px) {
+    .imagen{
+      background-size: 90% auto!important;
+    }
   }
 }
 /* Marketing section of Overview
