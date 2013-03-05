@@ -3,7 +3,7 @@ title: Montaje RepRapPro Mendel
 subtitle: Montaje de una impresora 3D autoreplicable
 category: evento
 slug: reprappro-mendel
-flickr-set: 72157629828078788
+flickr-set: 72157632245934294
 tags:
  - Fabricación digital
  - Hardware Libre

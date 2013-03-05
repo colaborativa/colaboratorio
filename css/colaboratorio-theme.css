@@ -325,6 +325,12 @@ hr.soften {
     margin: 20px 40px;
   }
 }
+.seccion a:link,
+.seccion a:visited,
+.seccion a:active {
+  color: white;
+  text-decoration: underline;
+}
 /* Marketing section of Overview
 -------------------------------------------------- */
 .marketing .row {
@@ -404,14 +410,18 @@ hr.soften {
 }
 #como .marketing-byline {
   font-size: 24px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 #como h2 {
   margin-bottom: 20px;
 }
 #como p {
   font-size: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+#como .quienessomos h2,
+#como .quienessomos p {
+  text-align: center;
 }
 .footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
