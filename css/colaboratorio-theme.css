@@ -331,6 +331,12 @@ hr.soften {
   color: white;
   text-decoration: underline;
 }
+.seccion .thumbnail a:link,
+.seccion .thumbnail a:visited,
+.seccion .thumbnail a:active {
+  color: #555555;
+  text-decoration: underline;
+}
 /* Marketing section of Overview
 -------------------------------------------------- */
 .marketing .row {
