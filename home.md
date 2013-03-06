@@ -9,13 +9,13 @@ section1:
  subtitle: "El garaje de Colaborativa.eu, dedicado a la cultura libre"
  subSection1:
   title: "En un garaje"
-  blurb: "Hemos transformado nuestro garaje en un espacio abierto para la investigación y promoción de la cultura libre."
+  blurb: "Hemos transformado nuestro garaje en un espacio abierto para la investigación y promoción de la [cultura libre](http://es.wikipedia.org/wiki/Cultura_libre)."
  subSection2:
   title: "Arte y Ciencia"
-  blurb: "Nos apasionan los proyectos que combinan arte y ciencia de igual a igual olvidándonos de ideas preconcebidas."
+  blurb: "Nos apasionan los proyectos que combinan arte y ciencia de igual a igual, sin ideas preconcebidas."
  subSection3:
   title: "Cultura libre"
-  blurb: "Usa el Colaboratorio gratis, a cambio libera tu proyecto y comparte tu experiencia con todos."
+  blurb: "Usa el Colaboratorio [gratis](#como), a cambio, libera tu proyecto y comparte tu experiencia con todos."
 section2:
  title: "Proyectos y eventos"
  subtitle: "Subscríbete y te mantendremos informado"
@@ -25,7 +25,7 @@ section3:
  subtitle: "¿Cómo participo en el Colaboratorio?"
  subSection1:
   title: "¿Cómo participar?"
-  blurb: "Queremos **explorar proyectos ya existentes** y facilitar el desarrollo de **nuevos proyectos en el marco de la cultura libre**.<br/>Si estás interesado en poner en marcha un proyecto de estas características escríbenos un email a info \[at]\ colaborativa.eu."
+  blurb: "Queremos **explorar proyectos ya existentes** y facilitar el desarrollo de **nuevos proyectos en el marco de la cultura libre**.<br/>Si estás interesado en poner en marcha un proyecto de estas características escríbenos un email a {.correo}[info \[arroba\] colaborativa.eu]()."
  subSection2:
   title: "¿Qué te ofrecemos?"
   blurb: "Estamos situados en pleno centro de Córdoba en el pintoresco [barrio de Santa Marina](http://www.flickr.com/photos/barriosantamarina/with/2446982772/). Disponemos de un pequeño pero **bien equipado laboratorio para proyectos audiovisuales, software y hardware**: Robots, Impresoras 3d, Arduinos, Raspberry Pi, Kinects y mucho más!"
