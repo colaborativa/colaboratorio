@@ -97,7 +97,12 @@
 							{% for event in site.categories['evento'] %}
 							<li class="span4">
 								<div class="thumbnail">
-									<a href="http://www.flickr.com/photos/50381188@N06/sets/{{ event.flickr-set }}/show/" data-toggle="modal"><img src="imagenes/eventos/{{ event.slug }}.jpg" alt=""></a>
+									{% if event.flickr-set %}
+									<a  href="http://www.flickr.com/photos/50381188@N06/sets/{{ event.flickr-set }}/show/">
+									{% else %}
+									<a>
+									{% endif %}
+									<img src="imagenes/eventos/{{ event.slug }}.jpg" alt=""></a>
 									<div class="caption">
 										<h2>{{ event.title }}</h2>
 										<h4>{{ event.subtitle }} · {{ event.date | date: "%b %Y"}}</h4>

@@ -34,7 +34,7 @@ section3:
   blurb: "Las reglas son sencillas: puedes utilizar gratuitamente el Colaboratorio y nuestra asistencia técnica (sin abusar) y a cambio te pedimos que liberes el proyecto con **una licencia libre de tu elección** y que **compartas tu experiencia en el Colaboratorio** en tus redes sociales. Creemos que es posible conseguir mucho más colaborando que compitiendo."
  subSection4:
   title: "¿Y sí mi proyecto no es libre?"
-  blurb: "**Aunque no puedas compartir tu proyecto** si que puedes contribuir a que otros desarrollen proyectos libres en el Colaboratorio.<br>Hemos establecido unas tarifas para proyectos propietarios de €xx/hora por el uso de los recursos del Colaboratorio y €xx/hora si necesitas asistencia técnica."
+  blurb: "**Aunque no puedas compartir tu proyecto** puedes contribuir a que **otros desarrollen proyectos libres** en el Colaboratorio.<br>Hemos establecido unas tarifas para proyectos propietarios de **€7/hora** por el uso de los recursos del Colaboratorio y **€15/hora** si necesitas asistencia técnica. Para tarifas por proyecto contáctanos en {.correo}[info \[arroba\] colaborativa.eu]()."
  subSection5:
   title: "¿Quiénes somos?"
   blurb: "Somos Colaborativa.eu, una **agencia de diseño, tecnología y acción social** ubicada en Córdoba, Europa. Creemos en el diseño y la tecnología como herramientas de cambio social, cultural y económico. [Nuestros proyectos](http://colaborativa.eu/proyectos/) nos definen más allá de nuestros títulos o perfiles profesionales."
