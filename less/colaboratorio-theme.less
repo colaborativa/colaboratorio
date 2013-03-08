@@ -4,12 +4,14 @@
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
 
-/* Body and structure
--------------------------------------------------- */
+/** Body and structure
+*/
 html{
   width:100%;
 }
 body#homepage {
+  /* this is for keeping font size in iphone and ipad */
+  -webkit-text-size-adjust:100%;
   color: white;
   width:100%;
   position: relative;
@@ -17,18 +19,29 @@ body#homepage {
   background: url(/imagenes/grid.jpg) top center;
 }
 
-footer {
-  text-align: center;
-  padding: 30px 0;
-  margin-top: 70px;
-}
-
+/** hide elements style 
+*/
 .oculto{
   position: absolute;
   clip: rect(1px 1px 1px 1px); /* IE6 & 7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+/** Tumbnail shadow enhancement 
+*/
+.thumbnail{
+  .box-shadow(0 0px 10px rgba(0,0,0,.5));
+  position: relative;
+  .etiquetas{
+    @media (min-width: 768px){
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
+
+/** ribbon style 
+*/
 #firma a{
   width:128px;
   height: 128px;
@@ -39,8 +52,11 @@ footer {
   z-index: 1000;
 }
 
-/* NABVAR THEMED
--------------------------------------------------- */
+
+
+
+/** Nabvar themed for colaborativa
+ */
 #homepage > .navbar{
   .box-shadow(0 -1px 6px rgba(0,0,0,.5));
   background-color: none;
@@ -91,7 +107,10 @@ footer {
     }
   }
 }
-@media (min-width: 320px) and (max-width: 768px) {
+
+/** Phone-specific styles for the NavBar
+*/
+@media (min-width: 320px) and (max-width: 769px) {
   #homepage .navbar{
     margin:0px;
     padding:0px;
@@ -119,58 +138,27 @@ footer {
     }
   }
 }
+
+/** Tablet and big screens specific styles for the navbar
+*/
 @media (min-width: 768px){
   #homepage .navbar .nav > li {
     float: left;
     height: 50px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     a{
       font-weight: 400;
       margin-bottom: 0px;
       line-height: 50px;
       &:hover{
         background-color: transparent;
-
       }
     }
   }
 }
 
-/* Change the docs' brand */
-#homepage > .navbar .brand {
-  display: none;
-  padding-right: 0;
-  padding-left: 0;
-  margin-left: 0px;
-  position: absolute;
-  top:0px;
-  left:10px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
-}
-#homepage > .navbar .brand:hover {
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
-}
 
-/* Faded out hr */
-hr.soften {
-  color: white;
-  border: none;
-  height: 1px;
-  margin: 54px 0;
-  border-top: 0px solid rgba(255,255,255,0.5);
-}
-
-
-/* Jumbotrons
--------------------------------------------------- */
+/** Main top Banner styles 
+*/
 .jumbotron {
   position: relative;
   border: none;
@@ -184,6 +172,28 @@ hr.soften {
   background-color: black;
   overflow: hidden;
   text-shadow: 0 1px 0 rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.8);
+  .grid{
+    width:100%;
+    position: absolute;
+    top:0px;
+    height:450px;
+    background: url(/imagenes/grid-transparent.png) top center;
+  }
+  .inner{
+    width:100%;
+    height: 450px;
+    position: absolute;
+    top:0px;
+    background: url(/imagenes/overlay.png) top center no-repeat;
+    margin: 0 auto;
+    padding:0px;
+    @media (max-width: 979px) {
+      background-size: 979px 450px!important;
+    }
+    @media (min-width: 979px) {
+      background-size: 100% 450px!important;
+    }
+  }
   .inner h1 {
     text-align: center;
     font-size: 100px;
@@ -213,30 +223,8 @@ hr.soften {
   }
 }
 
-/* Masthead (docs home) */
-
-.jumbotron .inner{
-  width:100%;
-  height: 450px;
-  position: absolute;
-  top:0px;
-	background: url(/imagenes/overlay.png) top center no-repeat;
-  margin: 0 auto;
-  padding:0px;
-  @media (max-width: 979px) {
-    background-size: 979px 450px!important;
-  }
-  @media (min-width: 979px) {
-    background-size: 100% 450px!important;
-  }
-}
-.grid{
-  width:100%;
-  position: absolute;
-  top:0px;
-  height:450px;
-  background: url(/imagenes/grid-transparent.png) top center;
-}
+/** Banner specific style
+*/
 .galeria {
   margin: 0px;
   padding: 0px;
@@ -245,7 +233,7 @@ hr.soften {
   top:0px;
   .imagen{
     position: relative;
-    /* La imagenes serán del 16:9 */
+    /* Images will have 16:9 proportion */
     height:450px;
     width: 100%;
     .creditos{
@@ -270,22 +258,13 @@ hr.soften {
   }
 }
 
-/* * tumbnail shadow enhancement */
 
-.thumbnail{
-  .box-shadow(0 0px 10px rgba(0,0,0,.5));
-  position: relative;
-  .etiquetas{
-    @media (min-width: 768px){
-      position: absolute;
-      bottom: 20px;
-    }
-  }
-}
+
+
 .seccion{
   @media (min-width: 320px) and (max-width: 768px) {
     .box-sizing(border-box);
-    margin: 20px 40px;
+    margin: 20px 20px;
   }
   a:link, a:visited, a:active {
    color: white;
@@ -299,47 +278,53 @@ hr.soften {
   }
 }
 
-/* Marketing section of Overview
--------------------------------------------------- */
-.marketing .row {
+/** descripcion main styles
+*/
+.descripcion .row {
   margin-bottom: 9px;
 }
-.marketing h1 {
+.descripcion h1 {
   font-family: "colaborativaMedium";
   margin: 0px 0 30px;
   font-size: 50px;
   line-height: 50px;
   font-weight: 300;
   text-align: center;
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: 38px;
+    line-height: 38px;
+  }
 }
-.marketing .marketing-byline {
+.descripcion .descripcion-byline {
   margin: -15px 0 40px;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
-.marketing h2 {
+.descripcion h2 {
   font-size: 32px;
   font-weight: 300;
 }
-.marketing p {
+.descripcion p {
   margin-right: 10px;
 }
 
-/* THEMED que section */
+/* THEMED #que section 
+*/
 #que {
   padding-top: 60px;
   margin-bottom: 90px;
-  .marketing-byline{
-    font-size: 24px;
-  }
   h2{
     text-align: center;
     margin-bottom: 20px;
     padding-top: 130px;
   }
-  p{
+  div.blurb{
     font-size: 18px;
     line-height: 24px;
     text-align: center;
@@ -354,12 +339,16 @@ hr.soften {
     background: url(../imagenes/cultura-libre.png) top center no-repeat;
   }
 }
+
+/* THEMED #proyectos section 
+*/
 #proyectos{
   padding-top: 60px;
   margin-bottom: 90px;
   .thumbnail{
     h2{
       font-size: 26px;
+      line-height: 26px;
     }
     h4{
       font-family: "Open Sans";
@@ -374,19 +363,28 @@ hr.soften {
     text-align: center;
     margin: 10px auto 50px auto;
   }
+  @media (min-width: 321px) and (max-width: 768px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: 320px) and (max-width: 768px){
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
+/* THEMED #como section 
+*/
 #como{
   padding-top: 60px;
   margin-bottom: 40px;
-  .marketing-byline{
-    font-size: 24px;
+  .descripcion-byline{
     margin-bottom: 50px;
   }
   h2{
     margin-bottom: 20px;
   }
-  p{
+  div.blurb{
     font-size: 16px;
     margin-bottom: 40px;
   }
@@ -395,8 +393,18 @@ hr.soften {
       text-align: center;
     }
   }
+  @media (min-width: 320px) and (max-width: 768px){
+    text-align: center;
+  }
 }
 
+/* THEMED Footer related styles
+*/
+footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+}
 .footer{
   border: 1px solid rgba(255,255,255,0.3);
   background-color: rgba(0,0,0,0.05);
@@ -414,17 +422,22 @@ hr.soften {
   }
 }
 
-/* this is for fixing line heigh problems in narrow screens */
-h2, h3 {
-  line-height: 25px!important;
-}
 
-/* this is for allowing a single row for all the chapter and event elements changing the number of rows in different screen sizes */
+/* this is for allowing a single row for all the chapter and event elements changing the number of rows in different screen sizes 
+*/
 
+/* Phone styles
+*/
 @media (min-width: 320px) and (max-width: 768px) {
-    body{
+  body{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .row-fluid > .span4, .row-fluid > .span6 {
+    width: 100%;
+  }
+  .thumbnails .span4{
+    width: 100%!important;
   }
   .span4{
     margin-left:0!important;
@@ -436,9 +449,9 @@ h2, h3 {
   }
 }
 
-
-@media (min-width: 768px) and (max-width: 979px) {
-
+/* Tablet styles
+*/
+@media (min-width: 769px) and (max-width: 979px) {
   .span4:nth-child(3n+1){
     margin-left:0!important;
   }
@@ -447,7 +460,7 @@ h2, h3 {
   }
   .thumbnails .span4{
     margin-left:20px!important;
-    width:352px!important;
+    width:350px!important;
   }
   .thumbnail{
     min-height: 640px!important;
@@ -455,7 +468,8 @@ h2, h3 {
   }
 }
 
-
+/* Computer styles
+*/
 @media (min-width: 979px) and (max-width: 1209px) {
   .span4:nth-child(3n+1){
     margin-left:0!important;
