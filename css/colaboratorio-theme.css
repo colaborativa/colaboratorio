@@ -302,9 +302,9 @@ body#homepage {
     margin: 20px 20px;
   }
 }
-.seccion a:link,
-.seccion a:visited,
-.seccion a:active {
+.seccion .blurb a:link,
+.seccion .blurb a:visited,
+.seccion .blurb a:active {
   color: white;
   text-decoration: underline;
 }
@@ -436,6 +436,22 @@ body#homepage {
   #como {
     text-align: center;
   }
+}
+/* THEMED HOTSPOT section
+*/
+#hotspot {
+  padding-top: 60px;
+  margin-bottom: 90px;
+}
+#hotspot h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 50px;
+}
+#hotspot div.blurb {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
 }
 /* THEMED Footer related styles
 */
