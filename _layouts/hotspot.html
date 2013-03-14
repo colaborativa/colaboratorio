@@ -3,7 +3,7 @@
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
-		<title>{{ page.title }} · {{ page.subtitle }}</title>
+		<title>{{ page.subtitle }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name='robots' content='index'/>
 		<meta name="Description" content="{{ page.subtitle }}">
@@ -53,6 +53,7 @@
 					</div>
 				</div>
 				<div class="seccion">
+					<p class="descripcion-byline">{{ page.section2.title }}: <a href="https://twitter.com/search?q={{ page.section2.hashtag1 | cgi_escape }}">{{ page.section2.hashtag1 }}</a>, <a href="https://twitter.com/search?q={{ page.section2.hashtag2 | cgi_escape }}">{{ page.section2.hashtag2 }}</a></p>
 					<div class="row-fluid">
 						<div class="span12">
 							<div class="blurb" style="text-align:center;margin-bottom:80px"><a href="http://google.com">¡Muchas gracias, puedes seguir navegando!</a></div>
@@ -65,8 +66,6 @@
 	<footer class="footer">
 		<div class="container">
 			<p>{{ page.footer.footer1 | markdownify }}</p>
-			<p>{{ page.footer.footer2 | markdownify }}</p>
-			<p>{{ page.footer.footer3 | markdownify }}</p>
 		</div>
 	</footer>
 	<!-- Button to trigger modal -->

@@ -302,6 +302,13 @@ body#homepage {
     margin: 20px 20px;
   }
 }
+.seccion .descripcion-byline a:link,
+.seccion .descripcion-byline a:visited,
+.seccion .descripcion-byline a:active {
+  color: white;
+  text-decoration: underline;
+}
+
 .seccion .blurb a:link,
 .seccion .blurb a:visited,
 .seccion .blurb a:active {
