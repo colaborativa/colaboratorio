@@ -4,7 +4,7 @@ title: Impresora 3D Mendel Tricolor
 subtitle: Montaje abierto de una impresora 3D autoreplicable
 category: evento
 slug: "mendel-tricolor"
-"flickr-set": null
+flickr-set: null
 tags: 
   - Fabricación digital
   - Hardware Libre
