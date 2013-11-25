@@ -25,7 +25,7 @@ section3:
  subtitle: "¿Cómo participo en el Colaboratorio?"
  subSection1:
   title: "¿Cómo participar?"
-  blurb: "Queremos **explorar proyectos ya existentes** y facilitar el desarrollo de **nuevos proyectos en el marco de la cultura libre**.<br/>Si estás interesado en poner en marcha un proyecto de estas características escríbenos un email a {.correo}[info \[arroba\] colaborativa.eu]()."
+  blurb: "Queremos **explorar proyectos ya existentes** y facilitar el desarrollo de **nuevos proyectos en el marco de la cultura libre**.<br/>Si estás interesado en poner en marcha un proyecto de estas características escríbenos un email a info@colaborativa.eu."
  subSection2:
   title: "¿Qué te ofrecemos?"
   blurb: "Estamos situados en pleno centro de Córdoba en el pintoresco [barrio de Santa Marina](http://www.flickr.com/photos/barriosantamarina/with/2446982772/). Disponemos de un pequeño pero **bien equipado laboratorio para proyectos audiovisuales, software y hardware**: Robots, Impresoras 3d, Arduinos, Raspberry Pi, Kinects y mucho más!"
@@ -34,7 +34,7 @@ section3:
   blurb: "Las reglas son sencillas: puedes utilizar gratuitamente el Colaboratorio y nuestra asistencia técnica (sin abusar) y a cambio te pedimos que liberes el proyecto con **una licencia libre de tu elección** y que **compartas tu experiencia en el Colaboratorio** en tus redes sociales. Creemos que es posible conseguir mucho más colaborando que compitiendo."
  subSection4:
   title: "¿Y sí mi proyecto no es libre?"
-  blurb: "**Aunque no puedas compartir tu proyecto** puedes contribuir a que **otros desarrollen proyectos libres** en el Colaboratorio.<br>Hemos establecido unas tarifas para proyectos propietarios de **€7/hora** por el uso de los recursos del Colaboratorio y **€15/hora** si necesitas asistencia técnica. Para tarifas por proyecto contáctanos en {.correo}[info \[arroba\] colaborativa.eu]()."
+  blurb: "**Aunque no puedas compartir** tu proyecto puedes contribuir a que **otros desarrollen proyectos libres** en el Colaboratorio.<br>Hemos establecido unas tarifas para proyectos propietarios de **€7/hora** por el uso de los recursos del Colaboratorio y **€15/hora** si necesitas asistencia técnica. Para tarifas por proyecto contáctanos en info@colaborativa.eu."
  subSection5:
   title: "¿Quiénes somos?"
   blurb: "Somos Colaborativa.eu, una **agencia de diseño, tecnología y acción social** ubicada en Córdoba, Europa. Creemos en el diseño y la tecnología como herramientas de cambio social, cultural y económico. [Nuestros proyectos](http://colaborativa.eu/proyectos/) nos definen más allá de nuestros títulos o perfiles profesionales."

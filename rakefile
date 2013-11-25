@@ -32,5 +32,5 @@ end
 
 task :launch do
   env = ENV['env'] || 'development'
-  sh "jekyll --auto --server --url #{config['environments'][env]['url']}"
+  sh "jekyll serve --watch --url #{config['environments'][env]['url']}"
 end

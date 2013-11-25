@@ -1,7 +1,1 @@
 exclude: [ "less", "CNAME", "Makefile", "LICENSE", "_assets", "Gemfile", "Gemfile.lock", "rakefile" ]
-url: http://colaboratorio.colaborativa.eu
-environments:
- development:
-  url: http://localhost:4000
- production:
-  url: http://colaboratorio.colaborativa.eu
