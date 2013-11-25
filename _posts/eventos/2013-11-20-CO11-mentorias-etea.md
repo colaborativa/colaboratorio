@@ -1,13 +1,13 @@
 ---
 published: true
-title: Mentorizamos proyectos sociales
-subtitle: En colaboración con ETEA Loyola
+title: "Mentorizamos proyectos sociales"
+subtitle: "En colaboración con ETEA Loyola"
 category: evento
 slug: mentorias-etea
 flickr-set: 72157638039017613
 tags: 
   - proyectos sociales
-  - bien común
+  - "bien común"
 
 ---
 
