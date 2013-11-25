@@ -7,7 +7,7 @@ slug: mentorias-etea
 flickr-set: 72157638039017613
 tags: 
   - proyectos sociales
-  - "bien común"
+  - bien comun
 
 ---
 
