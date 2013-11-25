@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: "Mentorizamos proyectos sociales"
 subtitle: "En colaboración con ETEA Loyola"
 category: evento

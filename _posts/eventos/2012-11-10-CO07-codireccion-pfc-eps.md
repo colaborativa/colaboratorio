@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: "Codirigimos un proyecto fin de carrera abierto"
 subtitle: "En colaboración con EPS Córdoba"
 category: evento
